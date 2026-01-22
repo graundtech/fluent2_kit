@@ -98,7 +98,7 @@ class _RLawlessLandState extends State<RLawlessLand> {
                       builder: (BuildContext context,
                           ScrollController scrollController) {
                         return Container(
-                          color: Colors.red.withOpacity(0.3),
+                          color: Colors.red.withAlpha((0.3 * 255).round()),
                           child: ListView.builder(
                               controller: scrollController,
                               itemCount: 25,

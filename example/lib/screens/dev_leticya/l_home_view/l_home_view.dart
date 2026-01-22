@@ -356,7 +356,7 @@ class _LHomeViewState extends State<LHomeView> {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 8.0),
               child: FluentContainer(
-                color: Colors.lightGreen.withOpacity(0.64),
+                color: Colors.lightGreen.withAlpha((0.64 * 255).round()),
                 cornerRadius: FluentCornerRadius.xLarge,
                 strokeStyle: FluentStrokeStyle(
                   color: Colors.pink,

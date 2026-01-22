@@ -12,7 +12,7 @@ dependencies:
   flutter:
     sdk: flutter
   gbt_essentials:
-    hosted: https://dart.pkg.jetbrains.space/grbtec-com/p/main/dart/
+    hosted: https://dart.indicacode.com
     version: ^1.1.3
   gbt_fluent2_ui:
     path: ../
@@ -23,7 +23,7 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   gbt_lints:
-    hosted: https://dart.pkg.jetbrains.space/grbtec-com/p/main/dart/
+    hosted: https://dart.indicacode.com
     version: ^1.0.0
 
 # For information on the generic Dart part of this file, see the

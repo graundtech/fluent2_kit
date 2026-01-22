@@ -33,7 +33,9 @@ class ExampleIcons extends StatelessWidget {
               children: iconVariants
                   .map(
                     (variant) => FluentContainer(
-                      color: Theme.of(context).primaryColor.withOpacity(0.2),
+                      color: Theme.of(context)
+                          .primaryColor
+                          .withAlpha((0.2 * 255).round()),
                       padding: EdgeInsets.symmetric(
                           horizontal: FluentSize.size20.value,
                           vertical: FluentSize.size40.value),

@@ -5,7 +5,7 @@ void main() async {
   final content = file.readAsStringSync();
   file.writeAsString(
     content.replaceAll(
-      RegExp(".+:(?:[^:]|[\n])+hosted: (?:.|[\n])+version: .+\..+\..+"),
+      RegExp(r".+:(?:[^:]|[\n])+hosted: (?:.|[\n])+version: .+\..+\..+"),
       "",
     ),
   );
@@ -14,7 +14,7 @@ void main() async {
   final content2 = file2.readAsStringSync();
   file2.writeAsString(
     content2.replaceAll(
-      RegExp(".+:(?:[^:]|[\n])+hosted: .+:\/\/[^:]+version: .+\..+\..+"),
+      RegExp(r".+:(?:[^:]|[\n])+hosted: .+://[^:]+version: .+\..+\..+"),
       "",
     ),
   );
