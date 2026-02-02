@@ -1,4 +1,4 @@
-import 'package:gbt_fluent2_ui/src/fluent_models/fluent_stroke_style.dart';
+import 'package:idc_fluent2_ui/src/fluent_models/fluent_stroke_style.dart';
 
 class FluentStrokeTheme {
   final FluentStrokeStyle? stroke1;

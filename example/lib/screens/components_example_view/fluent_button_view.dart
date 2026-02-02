@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
-import 'package:gbt_fluent2_ui/fluent_icons.dart';
-import 'package:gbt_fluent2_ui/gbt_fluent2_ui.dart';
+import 'package:idc_fluent2_ui/fluent_icons.dart';
+import 'package:idc_fluent2_ui/idc_fluent2_ui.dart';
 
 class FluentButtonView extends StatelessWidget {
   const FluentButtonView({super.key});

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:gbt_fluent2_ui/gbt_fluent2_ui.dart';
-import 'package:gbt_fluent2_ui/src/components/conditional_parent_widget/conditional_parent_widget.dart';
-import 'package:gbt_fluent2_ui/src/components/fluent_components/fluent_stroke_border.dart';
+import 'package:idc_fluent2_ui/idc_fluent2_ui.dart';
+import 'package:idc_fluent2_ui/src/components/conditional_parent_widget/conditional_parent_widget.dart';
+import 'package:idc_fluent2_ui/src/components/fluent_components/fluent_stroke_border.dart';
 
 class FluentContainer extends StatelessWidget {
   final Widget? child;

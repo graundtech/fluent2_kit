@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:gbt_fluent2_ui/fluent_icons.dart';
-import 'package:gbt_fluent2_ui/gbt_fluent2_ui.dart';
+import 'package:idc_fluent2_ui/fluent_icons.dart';
+import 'package:idc_fluent2_ui/idc_fluent2_ui.dart';
 
 class FluentSheetView extends StatefulWidget {
   const FluentSheetView({super.key});

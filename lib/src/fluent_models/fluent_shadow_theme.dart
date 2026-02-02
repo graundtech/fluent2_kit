@@ -1,4 +1,4 @@
-import 'package:gbt_fluent2_ui/src/fluent_models/fluent_shadow.dart';
+import 'package:idc_fluent2_ui/src/fluent_models/fluent_shadow.dart';
 
 class FluentShadowTheme {
   final FluentShadow? shadow2;

@@ -2,7 +2,7 @@ import 'dart:math';
 
 import 'package:example/screens/dev_railson/r_delivery_view/r__delivery_view.dart';
 import 'package:flutter/material.dart';
-import 'package:gbt_fluent2_ui/gbt_fluent2_ui.dart';
+import 'package:idc_fluent2_ui/idc_fluent2_ui.dart';
 
 class RToastAndBannerPage extends StatefulWidget {
   const RToastAndBannerPage({super.key});

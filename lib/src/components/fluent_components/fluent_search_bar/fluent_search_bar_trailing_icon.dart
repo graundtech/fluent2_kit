@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:gbt_fluent2_ui/gbt_fluent2_ui.dart';
-import 'package:gbt_fluent2_ui/src/components/fluent_components/fluent_search_bar/cancel_icon.dart';
+import 'package:idc_fluent2_ui/idc_fluent2_ui.dart';
+import 'package:idc_fluent2_ui/src/components/fluent_components/fluent_search_bar/cancel_icon.dart';
 
 class FluentSearchBarTrailingIcon extends StatelessWidget {
   final void Function() onTapCancelIcon;

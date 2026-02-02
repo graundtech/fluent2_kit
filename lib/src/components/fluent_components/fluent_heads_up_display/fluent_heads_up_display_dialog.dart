@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart' as material;
 import 'package:flutter/material.dart';
-import 'package:gbt_fluent2_ui/gbt_fluent2_ui.dart';
+import 'package:idc_fluent2_ui/idc_fluent2_ui.dart';
 
 class FluentHeadsUpDisplayDialog extends StatefulWidget {
   final Future<void> future;

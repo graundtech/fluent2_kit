@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:gbt_fluent2_ui/src/fluent_models/fluent_font_weight.dart';
-import 'package:gbt_fluent2_ui/src/fluent_models/fluent_text_style.dart';
-import 'package:gbt_fluent2_ui/src/fluent_with_material/mixed_fluent_font_weight.dart';
+import 'package:idc_fluent2_ui/src/fluent_models/fluent_font_weight.dart';
+import 'package:idc_fluent2_ui/src/fluent_models/fluent_text_style.dart';
+import 'package:idc_fluent2_ui/src/fluent_with_material/mixed_fluent_font_weight.dart';
 
 class MixedFluentTextStyle extends TextStyle implements FluentTextStyle {
   @override

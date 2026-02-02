@@ -37,7 +37,7 @@ dependencies:
 ```
 Import in files that it will be used
 ```dart
-import 'package:gbt_fluent2_ui/gbt_fluent2_ui.dart';
+import 'package:idc_fluent2_ui/idc_fluent2_ui.dart';
 ```
 </br>
 
@@ -78,7 +78,7 @@ FluentScaffold(
 ### Theme
 Import light and dark theme to your project:
 ```dart
-import 'package:gbt_fluent2_ui/theme_data.dart' as theme_data;
+import 'package:idc_fluent2_ui/theme_data.dart' as theme_data;
 
 final theme = theme_data.theme;
 final darkTheme = theme_data.darkTheme;
@@ -88,7 +88,7 @@ Or you can pass your own brandColor:
 Suggestion: use [Smart Swatch Generator](https://smart-swatch.netlify.app/#7f22e2) to get your color palette
 
 ```dart
-import 'package:gbt_fluent2_ui/theme_data.dart';
+import 'package:idc_fluent2_ui/theme_data.dart';
 
 const _brandColor = MaterialColor(
   0xFF7f22e2,
@@ -131,7 +131,7 @@ FluentProvider(
 
 Import  `FluentIcons`:
 ```dart
-import 'package:gbt_fluent2_ui/fluent_icons.dart';
+import 'package:idc_fluent2_ui/fluent_icons.dart';
 ```
 
 </br>

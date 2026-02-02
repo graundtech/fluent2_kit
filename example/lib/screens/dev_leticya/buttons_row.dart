@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gbt_fluent2_ui/gbt_fluent2_ui.dart';
+import 'package:idc_fluent2_ui/idc_fluent2_ui.dart';
 
 class ButtonsRow extends StatelessWidget {
   const ButtonsRow({super.key});
