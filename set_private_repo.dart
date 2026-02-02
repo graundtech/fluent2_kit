@@ -1,7 +1,7 @@
 import 'dart:io';
 
 var additionalLine =
-    "publish_to: https://dart.pkg.jetbrains.space/grbtec-com/p/main/dart/";
+    "publish_to: https://dart.indicacode.com";
 
 void main() {
   final file = File("pubspec.yaml");

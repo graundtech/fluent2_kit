@@ -1,7 +1,7 @@
-name: gbt_fluent2_ui
+name: idc_fluent2_ui
 description: A robust Fluent2 Material-based design system for seamless and intuitive user experiences.
 version: 8.1.0
-repository: https://github.com/grbtec/gbt_fluent2_ui
+repository: https://github.com/grbtec/idc_fluent2_ui
 
 
 environment:
