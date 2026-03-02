@@ -39,25 +39,28 @@ class GbtFluentThemeData extends ThemeData implements FluentThemeDataModel {
   /// Convert the [extensionsIterable] passed to [ThemeData.new] or [copyWith]
   /// to the stored [extensions] map, where each entry's key consists of the extension's type.
   static Map<Object, ThemeExtension<dynamic>> _themeExtensionIterableToMap(
-      Iterable<ThemeExtension<dynamic>> extensionsIterable) {
-    return Map<Object, ThemeExtension<dynamic>>.unmodifiable(<Object,
-        ThemeExtension<dynamic>>{
-      // Strangely, the cast is necessary for tests to run.
-      for (final ThemeExtension<dynamic> extension in extensionsIterable)
-        extension.type: extension as ThemeExtension<ThemeExtension<dynamic>>,
-    });
+    Iterable<ThemeExtension<dynamic>> extensionsIterable,
+  ) {
+    return Map<Object, ThemeExtension<dynamic>>.unmodifiable(
+      <Object, ThemeExtension<dynamic>>{
+        // Strangely, the cast is necessary for tests to run.
+        for (final ThemeExtension<dynamic> extension in extensionsIterable)
+          extension.type: extension as ThemeExtension<ThemeExtension<dynamic>>,
+      },
+    );
   }
 
   @override
   Adaptation<T>? getAdaptation<T>() => adaptationMap[T] as Adaptation<T>?;
 
   static Map<Type, Adaptation<Object>> _createAdaptationMap(
-      Iterable<Adaptation<Object>> adaptations) {
+    Iterable<Adaptation<Object>> adaptations,
+  ) {
     final Map<Type, Adaptation<Object>> adaptationMap =
         <Type, Adaptation<Object>>{
-      for (final Adaptation<Object> adaptation in adaptations)
-        adaptation.type: adaptation
-    };
+          for (final Adaptation<Object> adaptation in adaptations)
+            adaptation.type: adaptation,
+        };
     return adaptationMap;
   }
 
@@ -83,7 +86,7 @@ class GbtFluentThemeData extends ThemeData implements FluentThemeDataModel {
     bool? applyElevationOverlayColor,
     NoDefaultCupertinoThemeData? cupertinoOverrideTheme,
     Iterable<ThemeExtension<dynamic>>? extensions,
-    InputDecorationTheme? inputDecorationTheme,
+    Object? inputDecorationTheme,
     MaterialTapTargetSize? materialTapTargetSize,
     PageTransitionsTheme? pageTransitionsTheme,
     TargetPlatform? platform,
@@ -104,7 +107,6 @@ class GbtFluentThemeData extends ThemeData implements FluentThemeDataModel {
     Color? highlightColor,
     Color? hintColor,
     Color? hoverColor,
-    Color? indicatorColor,
     Color? primaryColor,
     Color? primaryColorDark,
     Color? primaryColorLight,
@@ -121,20 +123,20 @@ class GbtFluentThemeData extends ThemeData implements FluentThemeDataModel {
     Typography? typography,
     // COMPONENT THEMES
     ActionIconThemeData? actionIconTheme,
-    AppBarTheme? appBarTheme,
+    Object? appBarTheme,
     BadgeThemeData? badgeTheme,
     MaterialBannerThemeData? bannerTheme,
-    BottomAppBarTheme? bottomAppBarTheme,
+    BottomAppBarThemeData? bottomAppBarTheme,
     BottomNavigationBarThemeData? bottomNavigationBarTheme,
     BottomSheetThemeData? bottomSheetTheme,
     ButtonThemeData? buttonTheme,
-    Object? cardTheme,
+    CardThemeData? cardTheme,
+    CarouselViewThemeData? carouselViewTheme,
     CheckboxThemeData? checkboxTheme,
     ChipThemeData? chipTheme,
     DataTableThemeData? dataTableTheme,
     DatePickerThemeData? datePickerTheme,
-    // TODO(QuncCccccc): Change the parameter type to DialogThemeData
-    Object? dialogTheme,
+    DialogThemeData? dialogTheme,
     DividerThemeData? dividerTheme,
     DrawerThemeData? drawerTheme,
     DropdownMenuThemeData? dropdownMenuTheme,
@@ -160,8 +162,7 @@ class GbtFluentThemeData extends ThemeData implements FluentThemeDataModel {
     SliderThemeData? sliderTheme,
     SnackBarThemeData? snackBarTheme,
     SwitchThemeData? switchTheme,
-    // TODO(QuncCccccc): Change the parameter type to TabBarThemeData
-    Object? tabBarTheme,
+    TabBarThemeData? tabBarTheme,
     TextButtonThemeData? textButtonTheme,
     TextSelectionThemeData? textSelectionTheme,
     TimePickerThemeData? timePickerTheme,
@@ -186,36 +187,32 @@ class GbtFluentThemeData extends ThemeData implements FluentThemeDataModel {
       'This feature was deprecated after v3.27.0-0.1.pre.',
     )
     Color? dialogBackgroundColor,
+    @Deprecated(
+      'Use TabBarThemeData.indicatorColor instead. '
+      'This feature was deprecated after v3.28.0-1.0.pre.',
+    )
+    Color? indicatorColor,
   }) {
-    // cupertinoOverrideTheme = cupertinoOverrideTheme?.noDefault();
-
-    // TODO(QuncCccccc): Clean it up once the type of `cardTheme` is changed to `CardThemeData`
-    if (cardTheme != null) {
-      if (cardTheme is CardTheme) {
-        cardTheme = cardTheme.data;
-      } else if (cardTheme is! CardThemeData) {
+    // TODO(QuncCccccc): Clean this up once the type of `inputDecorationTheme` is changed to `InputDecorationThemeData`
+    if (inputDecorationTheme != null) {
+      if (inputDecorationTheme is InputDecorationTheme) {
+        inputDecorationTheme = inputDecorationTheme.data;
+      } else if (inputDecorationTheme is! InputDecorationThemeData) {
         throw ArgumentError(
-            'cardTheme must be either a CardThemeData or a CardTheme');
+          'inputDecorationTheme must be either a '
+          'InputDecorationThemeData or a InputDecorationTheme',
+        );
       }
     }
 
-    // TODO(QuncCccccc): Clean this up once the type of `dialogTheme` is changed to `DialogThemeData`
-    if (dialogTheme != null) {
-      if (dialogTheme is DialogTheme) {
-        dialogTheme = dialogTheme.data;
-      } else if (dialogTheme is! DialogThemeData) {
+    // TODO(QuncCccccc): Clean this up once the type of `appBarTheme` is changed to `AppBarThemeData`
+    if (appBarTheme != null) {
+      if (appBarTheme is AppBarTheme) {
+        appBarTheme = appBarTheme.data;
+      } else if (appBarTheme is! AppBarThemeData) {
         throw ArgumentError(
-            'dialogTheme must be either a DialogThemeData or a DialogTheme');
-      }
-    }
-
-    // TODO(QuncCccccc): Clean this up once the type of `tabBarTheme` is changed to `TabBarThemeData`
-    if (tabBarTheme != null) {
-      if (tabBarTheme is TabBarTheme) {
-        tabBarTheme = tabBarTheme.data;
-      } else if (tabBarTheme is! TabBarThemeData) {
-        throw ArgumentError(
-            'tabBarTheme must be either a TabBarThemeData or a TabBarTheme');
+          'appBarTheme must be either a AppBarThemeData or a AppBarTheme',
+        );
       }
     }
 
@@ -239,7 +236,9 @@ class GbtFluentThemeData extends ThemeData implements FluentThemeDataModel {
       extensions: (extensions != null)
           ? _themeExtensionIterableToMap(extensions)
           : this.extensions,
-      inputDecorationTheme: inputDecorationTheme ?? this.inputDecorationTheme,
+      inputDecorationTheme:
+          inputDecorationTheme as InputDecorationThemeData? ??
+          this.inputDecorationTheme,
       materialTapTargetSize:
           materialTapTargetSize ?? this.materialTapTargetSize,
       pageTransitionsTheme: pageTransitionsTheme ?? this.pageTransitionsTheme,
@@ -253,10 +252,11 @@ class GbtFluentThemeData extends ThemeData implements FluentThemeDataModel {
       // COLOR
       canvasColor: canvasColor ?? this.canvasColor,
       cardColor: cardColor ?? this.cardColor,
-      colorScheme:
-          (colorScheme ?? this.colorScheme).copyWith(brightness: brightness),
+      colorScheme: (colorScheme ?? this.colorScheme).copyWith(
+        brightness: brightness,
+      ),
       dialogBackgroundColor:
-      // ignore: deprecated_member_use
+          // ignore: deprecated_member_use
           dialogBackgroundColor ?? this.dialogBackgroundColor,
       disabledColor: disabledColor ?? this.disabledColor,
       dividerColor: dividerColor ?? this.dividerColor,
@@ -264,6 +264,7 @@ class GbtFluentThemeData extends ThemeData implements FluentThemeDataModel {
       highlightColor: highlightColor ?? this.highlightColor,
       hintColor: hintColor ?? this.hintColor,
       hoverColor: hoverColor ?? this.hoverColor,
+      // ignore: deprecated_member_use
       indicatorColor: indicatorColor ?? this.indicatorColor,
       primaryColor: primaryColor ?? this.primaryColor,
       primaryColorDark: primaryColorDark ?? this.primaryColorDark,
@@ -283,7 +284,7 @@ class GbtFluentThemeData extends ThemeData implements FluentThemeDataModel {
       typography: typography ?? this.typography,
       // COMPONENT THEMES
       actionIconTheme: actionIconTheme ?? this.actionIconTheme,
-      appBarTheme: appBarTheme ?? this.appBarTheme,
+      appBarTheme: appBarTheme as AppBarThemeData? ?? this.appBarTheme,
       badgeTheme: badgeTheme ?? this.badgeTheme,
       bannerTheme: bannerTheme ?? this.bannerTheme,
       bottomAppBarTheme: bottomAppBarTheme ?? this.bottomAppBarTheme,
@@ -293,12 +294,13 @@ class GbtFluentThemeData extends ThemeData implements FluentThemeDataModel {
       // ignore: deprecated_member_use
       buttonBarTheme: buttonBarTheme ?? this.buttonBarTheme,
       buttonTheme: buttonTheme ?? this.buttonTheme,
-      cardTheme: cardTheme as CardThemeData? ?? this.cardTheme,
+      cardTheme: cardTheme ?? this.cardTheme,
+      carouselViewTheme: carouselViewTheme ?? this.carouselViewTheme,
       checkboxTheme: checkboxTheme ?? this.checkboxTheme,
       chipTheme: chipTheme ?? this.chipTheme,
       dataTableTheme: dataTableTheme ?? this.dataTableTheme,
       datePickerTheme: datePickerTheme ?? this.datePickerTheme,
-      dialogTheme: dialogTheme as DialogThemeData? ?? this.dialogTheme,
+      dialogTheme: dialogTheme ?? this.dialogTheme,
       dividerTheme: dividerTheme ?? this.dividerTheme,
       drawerTheme: drawerTheme ?? this.drawerTheme,
       dropdownMenuTheme: dropdownMenuTheme ?? this.dropdownMenuTheme,
@@ -327,7 +329,7 @@ class GbtFluentThemeData extends ThemeData implements FluentThemeDataModel {
       sliderTheme: sliderTheme ?? this.sliderTheme,
       snackBarTheme: snackBarTheme ?? this.snackBarTheme,
       switchTheme: switchTheme ?? this.switchTheme,
-      tabBarTheme: tabBarTheme as TabBarThemeData? ?? this.tabBarTheme,
+      tabBarTheme: tabBarTheme ?? this.tabBarTheme,
       textButtonTheme: textButtonTheme ?? this.textButtonTheme,
       textSelectionTheme: textSelectionTheme ?? this.textSelectionTheme,
       timePickerTheme: timePickerTheme ?? this.timePickerTheme,
@@ -396,9 +398,11 @@ class GbtFluentThemeData extends ThemeData implements FluentThemeDataModel {
     required super.bottomAppBarTheme,
     required super.bottomNavigationBarTheme,
     required super.bottomSheetTheme,
+    // ignore: deprecated_member_use
     required super.buttonBarTheme,
     required super.buttonTheme,
     required super.cardTheme,
+    required super.carouselViewTheme,
     required super.checkboxTheme,
     required super.chipTheme,
     required super.dataTableTheme,
@@ -453,7 +457,7 @@ class GbtFluentThemeData extends ThemeData implements FluentThemeDataModel {
     bool? applyElevationOverlayColor,
     NoDefaultCupertinoThemeData? cupertinoOverrideTheme,
     Iterable<ThemeExtension<dynamic>>? extensions,
-    InputDecorationTheme? inputDecorationTheme,
+    Object? inputDecorationTheme,
     MaterialTapTargetSize? materialTapTargetSize,
     PageTransitionsTheme? pageTransitionsTheme,
     TargetPlatform? platform,
@@ -498,16 +502,17 @@ class GbtFluentThemeData extends ThemeData implements FluentThemeDataModel {
     Typography? typography,
     // COMPONENT THEMES
     ActionIconThemeData? actionIconTheme,
-    AppBarTheme? appBarTheme,
+    Object? appBarTheme,
     BadgeThemeData? badgeTheme,
     MaterialBannerThemeData? bannerTheme,
-    BottomAppBarTheme? bottomAppBarTheme,
+    BottomAppBarThemeData? bottomAppBarTheme,
     BottomNavigationBarThemeData? bottomNavigationBarTheme,
     BottomSheetThemeData? bottomSheetTheme,
     // ignore: deprecated_member_use
     ButtonBarThemeData? buttonBarTheme,
     ButtonThemeData? buttonTheme,
     CardThemeData? cardTheme,
+    CarouselViewThemeData? carouselViewTheme,
     CheckboxThemeData? checkboxTheme,
     ChipThemeData? chipTheme,
     DataTableThemeData? dataTableTheme,
@@ -549,7 +554,17 @@ class GbtFluentThemeData extends ThemeData implements FluentThemeDataModel {
     cupertinoOverrideTheme = cupertinoOverrideTheme?.noDefault();
     extensions ??= <ThemeExtension<dynamic>>[];
     adaptations ??= <Adaptation<Object>>[];
-    inputDecorationTheme ??= const InputDecorationTheme();
+    if (inputDecorationTheme != null) {
+      if (inputDecorationTheme is InputDecorationTheme) {
+        inputDecorationTheme = inputDecorationTheme.data;
+      } else if (inputDecorationTheme is! InputDecorationThemeData) {
+        throw ArgumentError(
+          'inputDecorationTheme must be either a '
+          'InputDecorationThemeData or a InputDecorationTheme',
+        );
+      }
+    }
+    inputDecorationTheme ??= const InputDecorationThemeData();
     platform ??= defaultTargetPlatform;
     switch (platform) {
       case TargetPlatform.android:
@@ -568,18 +583,19 @@ class GbtFluentThemeData extends ThemeData implements FluentThemeDataModel {
     final bool useInkSparkle = platform == TargetPlatform.android && !kIsWeb;
     splashFactory ??= useMaterial3
         ? useInkSparkle
-            ? InkSparkle.splashFactory
-            : InkRipple.splashFactory
+              ? InkSparkle.splashFactory
+              : InkRipple.splashFactory
         : InkSplash.splashFactory;
 
     // COLOR
     assert(
-        colorScheme?.brightness == null ||
-            brightness == null ||
-            colorScheme!.brightness == brightness,
-        'ThemeData.brightness does not match ColorScheme.brightness. '
-        'Either override ColorScheme.brightness or ThemeData.brightness to '
-        'match the other.');
+      colorScheme?.brightness == null ||
+          brightness == null ||
+          colorScheme!.brightness == brightness,
+      'ThemeData.brightness does not match ColorScheme.brightness. '
+      'Either override ColorScheme.brightness or ThemeData.brightness to '
+      'match the other.',
+    );
     assert(colorSchemeSeed == null || colorScheme == null);
     assert(colorSchemeSeed == null || primarySwatch == null);
     assert(colorSchemeSeed == null || primaryColor == null);
@@ -589,15 +605,19 @@ class GbtFluentThemeData extends ThemeData implements FluentThemeDataModel {
     if (colorSchemeSeed != null || useMaterial3) {
       if (colorSchemeSeed != null) {
         colorScheme = ColorScheme.fromSeed(
-            seedColor: colorSchemeSeed, brightness: effectiveBrightness);
+          seedColor: colorSchemeSeed,
+          brightness: effectiveBrightness,
+        );
       }
       colorScheme ??= isDark ? _colorSchemeDarkM3 : _colorSchemeLightM3;
 
       // For surfaces that use primary color in light themes and surface color in dark
-      final Color primarySurfaceColor =
-          isDark ? colorScheme.surface : colorScheme.primary;
-      final Color onPrimarySurfaceColor =
-          isDark ? colorScheme.onSurface : colorScheme.onPrimary;
+      final Color primarySurfaceColor = isDark
+          ? colorScheme.surface
+          : colorScheme.primary;
+      final Color onPrimarySurfaceColor = isDark
+          ? colorScheme.onSurface
+          : colorScheme.onPrimary;
 
       // Default some of the color settings to values from the color scheme
       primaryColor ??= primarySurfaceColor;
@@ -622,11 +642,11 @@ class GbtFluentThemeData extends ThemeData implements FluentThemeDataModel {
     final bool primaryIsDark =
         estimatedPrimaryColorBrightness == Brightness.dark;
     focusColor ??= isDark
-        ? Colors.white.withAlpha((255*0.12).toInt())
-        : Colors.black.withAlpha((255*0.12).toInt());
+        ? Colors.white.withAlpha((255 * 0.12).toInt())
+        : Colors.black.withAlpha((255 * 0.12).toInt());
     hoverColor ??= isDark
-        ? Colors.white.withAlpha((255*0.04).toInt())
-        : Colors.black.withAlpha((255*0.04).toInt());
+        ? Colors.white.withAlpha((255 * 0.04).toInt())
+        : Colors.black.withAlpha((255 * 0.04).toInt());
     shadowColor ??= Colors.black;
     canvasColor ??= isDark ? Colors.grey[850]! : Colors.grey[50]!;
     scaffoldBackgroundColor ??= canvasColor;
@@ -649,7 +669,9 @@ class GbtFluentThemeData extends ThemeData implements FluentThemeDataModel {
     indicatorColor ??= colorScheme.secondary == primaryColor
         ? Colors.white
         : colorScheme.secondary;
-    hintColor ??= isDark ? Colors.white60 : Colors.black.withAlpha((255*0.6).toInt());
+    hintColor ??= isDark
+        ? Colors.white60
+        : Colors.black.withAlpha((255 * 0.6).toInt());
     // The default [buttonTheme] is here because it doesn't use the defaults for
     // [disabledColor], [highlightColor], and [splashColor].
     buttonTheme ??= ButtonThemeData(
@@ -663,8 +685,9 @@ class GbtFluentThemeData extends ThemeData implements FluentThemeDataModel {
       materialTapTargetSize: materialTapTargetSize,
     );
     disabledColor ??= isDark ? Colors.white38 : Colors.black38;
-    highlightColor ??=
-        isDark ? _kDarkThemeHighlightColor : _kLightThemeHighlightColor;
+    highlightColor ??= isDark
+        ? _kDarkThemeHighlightColor
+        : _kLightThemeHighlightColor;
     splashColor ??= isDark ? _kDarkThemeSplashColor : _kLightThemeSplashColor;
 
     // TYPOGRAPHY & ICONOGRAPHY
@@ -672,18 +695,22 @@ class GbtFluentThemeData extends ThemeData implements FluentThemeDataModel {
         ? Typography.material2021(platform: platform, colorScheme: colorScheme)
         : Typography.material2014(platform: platform);
     TextTheme defaultTextTheme = isDark ? typography.white : typography.black;
-    TextTheme defaultPrimaryTextTheme =
-        primaryIsDark ? typography.white : typography.black;
+    TextTheme defaultPrimaryTextTheme = primaryIsDark
+        ? typography.white
+        : typography.black;
     if (fontFamily != null) {
       defaultTextTheme = defaultTextTheme.apply(fontFamily: fontFamily);
-      defaultPrimaryTextTheme =
-          defaultPrimaryTextTheme.apply(fontFamily: fontFamily);
+      defaultPrimaryTextTheme = defaultPrimaryTextTheme.apply(
+        fontFamily: fontFamily,
+      );
     }
     if (fontFamilyFallback != null) {
-      defaultTextTheme =
-          defaultTextTheme.apply(fontFamilyFallback: fontFamilyFallback);
-      defaultPrimaryTextTheme =
-          defaultPrimaryTextTheme.apply(fontFamilyFallback: fontFamilyFallback);
+      defaultTextTheme = defaultTextTheme.apply(
+        fontFamilyFallback: fontFamilyFallback,
+      );
+      defaultPrimaryTextTheme = defaultPrimaryTextTheme.apply(
+        fontFamilyFallback: fontFamilyFallback,
+      );
     }
     if (package != null) {
       defaultTextTheme = defaultTextTheme.apply(package: package);
@@ -699,15 +726,25 @@ class GbtFluentThemeData extends ThemeData implements FluentThemeDataModel {
         : const IconThemeData(color: Colors.black);
 
     // COMPONENT THEMES
-    appBarTheme ??= const AppBarTheme();
+    if (appBarTheme != null) {
+      if (appBarTheme is AppBarTheme) {
+        appBarTheme = appBarTheme.data;
+      } else if (appBarTheme is! AppBarThemeData) {
+        throw ArgumentError(
+          'appBarTheme must be either a AppBarThemeData or a AppBarTheme',
+        );
+      }
+    }
+    appBarTheme ??= const AppBarThemeData();
     badgeTheme ??= const BadgeThemeData();
     bannerTheme ??= const MaterialBannerThemeData();
-    bottomAppBarTheme ??= const BottomAppBarTheme();
+    bottomAppBarTheme ??= const BottomAppBarThemeData();
     bottomNavigationBarTheme ??= const BottomNavigationBarThemeData();
     bottomSheetTheme ??= const BottomSheetThemeData();
     // ignore: deprecated_member_use
     buttonBarTheme ??= const ButtonBarThemeData();
     cardTheme ??= const CardThemeData();
+    carouselViewTheme ??= const CarouselViewThemeData();
     checkboxTheme ??= const CheckboxThemeData();
     chipTheme ??= const ChipThemeData();
     dataTableTheme ??= const DataTableThemeData();
@@ -763,7 +800,7 @@ class GbtFluentThemeData extends ThemeData implements FluentThemeDataModel {
       // ⚠️ cupertinoOverrideTheme: cupertinoOverrideTheme,
       extensions: {},
       // ⚠️_themeExtensionIterableToMap(extensions),
-      inputDecorationTheme: inputDecorationTheme,
+      inputDecorationTheme: inputDecorationTheme as InputDecorationThemeData,
       materialTapTargetSize: materialTapTargetSize,
       pageTransitionsTheme: pageTransitionsTheme,
       platform: platform,
@@ -799,7 +836,7 @@ class GbtFluentThemeData extends ThemeData implements FluentThemeDataModel {
       primaryIconTheme: primaryIconTheme,
       // COMPONENT THEMES
       actionIconTheme: actionIconTheme,
-      appBarTheme: appBarTheme,
+      appBarTheme: appBarTheme as AppBarThemeData,
       badgeTheme: badgeTheme,
       bannerTheme: bannerTheme,
       bottomAppBarTheme: bottomAppBarTheme,
@@ -808,6 +845,7 @@ class GbtFluentThemeData extends ThemeData implements FluentThemeDataModel {
       buttonBarTheme: buttonBarTheme,
       buttonTheme: buttonTheme,
       cardTheme: cardTheme,
+      carouselViewTheme: carouselViewTheme,
       checkboxTheme: checkboxTheme,
       chipTheme: chipTheme,
       dataTableTheme: dataTableTheme,
