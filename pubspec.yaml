@@ -1,6 +1,6 @@
 name: fluent2ui
 description: A robust Fluent2 Material-based design system for seamless and intuitive user experiences.
-version: 9.0.0
+version: 9.0.1
 repository: https://github.com/grbtec/fluent2ui
 publish_to: https://dart.indicacode.com
 
@@ -19,5 +19,3 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
-
-

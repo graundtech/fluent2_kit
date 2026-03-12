@@ -26,7 +26,7 @@ and the Flutter guide for
 </br>
 <p align="center">
    <img src="https://github.com/graundtech/fluent2ui/assets/94455123/279b1f1c-b0e5-4a92-aea0-21ebbd3a9234" alt="Fluent2 UI Design" width="170px">
-  <img src="https://github.com/graundtech/fluent2ui/assets/94455123/ddf28f29-edab-4d7d-98a4-5de492808d5a" alt="Fluent2 UI Design" width="170px">
+  <!--<img src="https://github.com/graundtech/fluent2ui/assets/94455123/ddf28f29-edab-4d7d-98a4-5de492808d5a" alt="Fluent2 UI Design" width="170px">-->
 </p>
 
 ## Installing 
