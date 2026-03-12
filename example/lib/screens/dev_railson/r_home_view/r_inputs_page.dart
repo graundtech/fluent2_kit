@@ -1,6 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:idc_fluent2_ui/idc_fluent2_ui.dart';
+import 'package:fluent2ui/fluent2ui.dart';
 
 class RInputsPage extends StatefulWidget {
   const RInputsPage({super.key});

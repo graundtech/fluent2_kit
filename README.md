@@ -11,11 +11,11 @@ and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/developing-packages). 
 -->
 
-![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/grbtec/gbt_fluent2_ui/publish_public.yaml)
+![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/graundtech/fluent2ui/publish_public.yaml)
 
 
 <p align="center">
-  <img src="https://github.com/grbtec/gbt_fluent2_ui/assets/94455123/05470ad4-c025-4e3f-b05a-776e90abaef8" width="200" />
+  <img src="https://github.com/graundtech/fluent2ui/assets/94455123/05470ad4-c025-4e3f-b05a-776e90abaef8" width="200" />
 </p>
 
 
@@ -25,19 +25,19 @@ and the Flutter guide for
 </div>
 </br>
 <p align="center">
-   <img src="https://github.com/grbtec/gbt_fluent2_ui/assets/94455123/279b1f1c-b0e5-4a92-aea0-21ebbd3a9234" alt="Fluent2 UI Design" width="170px">
-  <img src="https://github.com/grbtec/gbt_fluent2_ui/assets/94455123/ddf28f29-edab-4d7d-98a4-5de492808d5a" alt="Fluent2 UI Design" width="170px">
+   <img src="https://github.com/graundtech/fluent2ui/assets/94455123/279b1f1c-b0e5-4a92-aea0-21ebbd3a9234" alt="Fluent2 UI Design" width="170px">
+  <img src="https://github.com/graundtech/fluent2ui/assets/94455123/ddf28f29-edab-4d7d-98a4-5de492808d5a" alt="Fluent2 UI Design" width="170px">
 </p>
 
 ## Installing 
 Add in your pubspec.yaml file and run dart pub get to download the package.
 ```dart
 dependencies:
-  gbt_fluent2_ui:
+  fluent2ui:
 ```
 Import in files that it will be used
 ```dart
-import 'package:idc_fluent2_ui/idc_fluent2_ui.dart';
+import 'package:fluent2ui/fluent2ui.dart';
 ```
 </br>
 
@@ -52,7 +52,7 @@ import 'package:idc_fluent2_ui/idc_fluent2_ui.dart';
 
 ## Getting started
 
-<img width="980" alt="cover_image" src="https://github.com/grbtec/gbt_fluent2_ui/assets/94455123/0a1ea39c-9cc0-4f92-8541-0d12d66f713d">
+<img width="980" alt="cover_image" src="https://github.com/graundtech/fluent2ui/assets/94455123/0a1ea39c-9cc0-4f92-8541-0d12d66f713d">
 
 #### First of all, let's wrap our MaterialApp with FluentProvider
 
@@ -78,7 +78,7 @@ FluentScaffold(
 ### Theme
 Import light and dark theme to your project:
 ```dart
-import 'package:idc_fluent2_ui/theme_data.dart' as theme_data;
+import 'package:fluent2ui/theme_data.dart' as theme_data;
 
 final theme = theme_data.theme;
 final darkTheme = theme_data.darkTheme;
@@ -88,7 +88,7 @@ Or you can pass your own brandColor:
 Suggestion: use [Smart Swatch Generator](https://smart-swatch.netlify.app/#7f22e2) to get your color palette
 
 ```dart
-import 'package:idc_fluent2_ui/theme_data.dart';
+import 'package:fluent2ui/theme_data.dart';
 
 const _brandColor = MaterialColor(
   0xFF7f22e2,
@@ -131,7 +131,7 @@ FluentProvider(
 
 Import  `FluentIcons`:
 ```dart
-import 'package:idc_fluent2_ui/fluent_icons.dart';
+import 'package:fluent2ui/fluent_icons.dart';
 ```
 
 </br>
@@ -301,10 +301,10 @@ color: FluentColors.of(context).brandBackgroundTintRest
 <table>
   <tr>
     <td>
-      <img src="https://github.com/grbtec/gbt_fluent2_ui/assets/94455123/1714d3eb-9f2c-4311-988b-65655b722245" alt="dark-theme-part1" height="550px">
+      <img src="https://github.com/graundtech/fluent2ui/assets/94455123/1714d3eb-9f2c-4311-988b-65655b722245" alt="dark-theme-part1" height="550px">
     </td>
     <td>
-      <img src="https://github.com/grbtec/gbt_fluent2_ui/assets/94455123/bafb23a4-9b4a-4a16-8973-70aae6c1da35" alt="dark-theme-part2" height="550px">
+      <img src="https://github.com/graundtech/fluent2ui/assets/94455123/bafb23a4-9b4a-4a16-8973-70aae6c1da35" alt="dark-theme-part2" height="550px">
     </td>
   </tr>
 </table>
@@ -312,10 +312,10 @@ color: FluentColors.of(context).brandBackgroundTintRest
 <table>
   <tr>
     <td>
-      <img src="https://github.com/grbtec/gbt_fluent2_ui/assets/94455123/fdc98b74-e800-43e0-9f26-d32223fa60af" alt="dark-theme-part1" height="550px">
+      <img src="https://github.com/graundtech/fluent2ui/assets/94455123/fdc98b74-e800-43e0-9f26-d32223fa60af" alt="dark-theme-part1" height="550px">
     </td>
     <td>
-      <img src="https://github.com/grbtec/gbt_fluent2_ui/assets/94455123/8de5b645-11fb-4ff6-8b84-3d00e1bc295e" alt="dark-theme-part2" height="550px">
+      <img src="https://github.com/graundtech/fluent2ui/assets/94455123/8de5b645-11fb-4ff6-8b84-3d00e1bc295e" alt="dark-theme-part2" height="550px">
     </td>
   </tr>
 </table>
@@ -527,7 +527,7 @@ FluentList.oneLine(
 )
 ```
 
-<img width="373" alt="Screenshot 2024-02-20 at 16 07 11" src="https://github.com/grbtec/gbt_fluent2_ui/assets/94455123/c3f383f3-96a7-414c-8dd1-1694f19ab956">
+<img width="373" alt="Screenshot 2024-02-20 at 16 07 11" src="https://github.com/graundtech/fluent2ui/assets/94455123/c3f383f3-96a7-414c-8dd1-1694f19ab956">
 
 
 </br>
@@ -541,7 +541,7 @@ FluentList.multiLine(
   listItems: [...],
 )
 ```
-<img width="381" alt="Screenshot 2024-02-20 at 16 06 47" src="https://github.com/grbtec/gbt_fluent2_ui/assets/94455123/f1bdb093-9b51-41ef-8e6b-af8b911bb3d3">
+<img width="381" alt="Screenshot 2024-02-20 at 16 06 47" src="https://github.com/graundtech/fluent2ui/assets/94455123/f1bdb093-9b51-41ef-8e6b-af8b911bb3d3">
 
 </br>
 </br>

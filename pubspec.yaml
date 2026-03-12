@@ -1,7 +1,7 @@
-name: idc_fluent2_ui
+name: fluent2ui
 description: A robust Fluent2 Material-based design system for seamless and intuitive user experiences.
 version: 9.0.0
-repository: https://github.com/grbtec/idc_fluent2_ui
+repository: https://github.com/grbtec/fluent2ui
 publish_to: https://dart.indicacode.com
 
 environment:

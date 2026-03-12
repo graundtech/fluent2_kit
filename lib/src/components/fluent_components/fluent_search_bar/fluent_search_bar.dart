@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:idc_fluent2_ui/fluent_icons.dart';
-import 'package:idc_fluent2_ui/idc_fluent2_debug.dart';
-import 'package:idc_fluent2_ui/idc_fluent2_ui.dart';
-import 'package:idc_fluent2_ui/utils/debouncer.dart';
+import 'package:fluent2ui/fluent_icons.dart';
+import 'package:fluent2ui/fluent2_debug.dart';
+import 'package:fluent2ui/fluent2ui.dart';
+import 'package:fluent2ui/utils/debouncer.dart';
 
 import 'cancel_icon.dart';
 
@@ -31,9 +31,9 @@ class FluentSearchBar extends StatefulWidget {
     this.cancelTextColor,
     this.hintText,
     this.themeColorVariation = FluentThemeColorVariation.neutral,
-  })  : trailingIcon = null,
-        onTapTrailingIcon = null,
-        searchBarAlignment = SearchBarAlignment.centered;
+  }) : trailingIcon = null,
+       onTapTrailingIcon = null,
+       searchBarAlignment = SearchBarAlignment.centered;
 
   FluentSearchBar.leftAligned({
     super.key,
@@ -67,46 +67,48 @@ class _FluentSearchBarState extends State<FluentSearchBar> {
   }
 
   void onChange(String value) {
-    searchBarController._debounce(
-      () async {
-        setState(() {
-          searchBarController.toggleIsLoading();
-        });
+    searchBarController._debounce(() async {
+      setState(() {
+        searchBarController.toggleIsLoading();
+      });
 
-        if (searchBarController.queryString.isNotEmpty) {
-          if (GbtFluent2Debug.printIsEnabled) {
-            print('ASYNC FUNCTION RUNNING...');
-          }
-          await widget.onSearch(value).whenComplete(
-            () {
+      if (searchBarController.queryString.isNotEmpty) {
+        if (GbtFluent2Debug.printIsEnabled) {
+          print('ASYNC FUNCTION RUNNING...');
+        }
+        await widget
+            .onSearch(value)
+            .whenComplete(() {
               setState(() {
                 searchBarController.toggleIsLoading();
               });
-            },
-          ).then((value) {
-            if (GbtFluent2Debug.printIsEnabled) {
-              print(
-                  'ENDED OPERATION AND THIS IS THE VALUE: ${searchBarController.queryString}');
-            }
-          }).onError((error, stackTrace) {
-            if (GbtFluent2Debug.printIsEnabled) {
-              print('ERROR IN OPERATION');
-            }
-          });
-        } else {
-          widget.onEmpty?.call();
-          if (GbtFluent2Debug.printIsEnabled) {
-            print('NOT RUNNING ASYNC FUNCTION');
-          }
-          setState(() {
-            searchBarController.toggleIsLoading();
-          });
+            })
+            .then((value) {
+              if (GbtFluent2Debug.printIsEnabled) {
+                print(
+                  'ENDED OPERATION AND THIS IS THE VALUE: ${searchBarController.queryString}',
+                );
+              }
+            })
+            .onError((error, stackTrace) {
+              if (GbtFluent2Debug.printIsEnabled) {
+                print('ERROR IN OPERATION');
+              }
+            });
+      } else {
+        widget.onEmpty?.call();
+        if (GbtFluent2Debug.printIsEnabled) {
+          print('NOT RUNNING ASYNC FUNCTION');
         }
-      },
-    );
+        setState(() {
+          searchBarController.toggleIsLoading();
+        });
+      }
+    });
     if (GbtFluent2Debug.printIsEnabled) {
       print(
-          '===> VALUE OF TEXT EDITING CONTROLLER: ${searchBarController.queryString}');
+        '===> VALUE OF TEXT EDITING CONTROLLER: ${searchBarController.queryString}',
+      );
     }
   }
 
@@ -145,15 +147,10 @@ class _FluentSearchBarState extends State<FluentSearchBar> {
           ),
           size: FluentSize.size200.value,
         ),
-        child: GestureDetector(
-          onTap: onTapTrailingIcon,
-          child: icon,
-        ),
+        child: GestureDetector(onTap: onTapTrailingIcon, child: icon),
       );
     }
-    return SizedBox(
-      width: FluentSize.size200.value,
-    );
+    return SizedBox(width: FluentSize.size200.value);
   }
 
   @override
@@ -176,7 +173,8 @@ class _FluentSearchBarState extends State<FluentSearchBar> {
           child: Container(
             height: 36,
             child: TextField(
-              textAlign: searchBarAlignment != SearchBarAlignment.centered ||
+              textAlign:
+                  searchBarAlignment != SearchBarAlignment.centered ||
                       hasFocus ||
                       isNotEmpty
                   ? TextAlign.start
@@ -246,21 +244,23 @@ class _FluentSearchBarState extends State<FluentSearchBar> {
                   },
                   onTapTrailingIcon: widget.onTapTrailingIcon,
                 ),
-                prefixIcon: searchBarAlignment != SearchBarAlignment.centered ||
+                prefixIcon:
+                    searchBarAlignment != SearchBarAlignment.centered ||
                         hasFocus ||
                         isNotEmpty
                     ? Icon(
                         FluentIcons.search_20_regular,
                         size: FluentSize.size200.value,
                         color: colorMode(
-                            isNeutral
-                                ? hasFocus
+                          isNeutral
+                              ? hasFocus
                                     ? FluentColors.neutralForeground1Rest
                                     : FluentColors.neutralForeground3Rest
-                                : FluentDarkColors.neutralForeground1Rest,
-                            hasFocus
-                                ? FluentDarkColors.neutralForeground1Rest
-                                : FluentDarkColors.neutralForeground3Rest),
+                              : FluentDarkColors.neutralForeground1Rest,
+                          hasFocus
+                              ? FluentDarkColors.neutralForeground1Rest
+                              : FluentDarkColors.neutralForeground3Rest,
+                        ),
                       )
                     : Align(
                         widthFactor: 0,
@@ -285,14 +285,13 @@ class _FluentSearchBarState extends State<FluentSearchBar> {
           ),
         ),
         if (hasFocus || isNotEmpty) ...[
-          SizedBox(
-            width: FluentSize.size120.value,
-          ),
+          SizedBox(width: FluentSize.size120.value),
           TextButton(
             style: TextButton.styleFrom(
               minimumSize: Size.zero,
               padding: EdgeInsets.zero,
-              foregroundColor: cancelTextColor ??
+              foregroundColor:
+                  cancelTextColor ??
                   colorMode(
                     isNeutral
                         ? FluentColors.neutralForeground1Rest
@@ -308,14 +307,13 @@ class _FluentSearchBarState extends State<FluentSearchBar> {
               widget.onCancelOperation();
               if (GbtFluent2Debug.printIsEnabled) {
                 print(
-                    'Is value changed? => ${searchBarController.queryString}');
+                  'Is value changed? => ${searchBarController.queryString}',
+                );
               }
             },
             child: FluentText(
               'Cancelar',
-              style: FluentThemeDataModel.of(context)
-                  .fluentTextTheme
-                  ?.body1
+              style: FluentThemeDataModel.of(context).fluentTextTheme?.body1
                   ?.fluentCopyWith(
                     fluentColor: colorMode(
                       widget.themeColorVariation ==
@@ -326,7 +324,7 @@ class _FluentSearchBarState extends State<FluentSearchBar> {
                     ),
                   ),
             ),
-          )
+          ),
         ],
       ],
     );

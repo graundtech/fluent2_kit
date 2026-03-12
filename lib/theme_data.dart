@@ -1,9 +1,9 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
-import 'package:idc_fluent2_ui/idc_fluent2_ui.dart';
-import 'package:idc_fluent2_ui/src/fluent_with_material/mixed_fluent_stroke_style.dart';
-import 'package:idc_fluent2_ui/src/fluent_with_material/mixed_fluent_stroke_theme.dart';
+import 'package:fluent2ui/fluent2ui.dart';
+import 'package:fluent2ui/src/fluent_with_material/mixed_fluent_stroke_style.dart';
+import 'package:fluent2ui/src/fluent_with_material/mixed_fluent_stroke_theme.dart';
 
 const _brandColor = MaterialColor(
   0XFF0F6CBD,

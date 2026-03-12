@@ -1,8 +1,8 @@
 import 'package:example/screens/components_example_view/fluent_list_view/multi_line_list_example_view.dart';
 import 'package:example/screens/components_example_view/fluent_list_view/one_line_list_view.dart';
 import 'package:flutter/material.dart';
-import 'package:idc_fluent2_ui/fluent_icons.dart';
-import 'package:idc_fluent2_ui/idc_fluent2_ui.dart';
+import 'package:fluent2ui/fluent_icons.dart';
+import 'package:fluent2ui/fluent2ui.dart';
 
 class FluentListView extends StatelessWidget {
   final FluentTabBarController fluentTabBarController;

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:idc_fluent2_ui/idc_fluent2_ui.dart';
-import 'package:idc_fluent2_ui/src/components/dotted_border/dotted_border.dart';
+import 'package:fluent2ui/fluent2ui.dart';
+import 'package:fluent2ui/src/components/dotted_border/dotted_border.dart';
 
 class FluentStrokeBorder extends StatelessWidget {
   final Widget? child;

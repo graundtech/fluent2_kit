@@ -2,8 +2,8 @@ import 'package:example/routing/routes.dart';
 import 'package:example/theme_mode_provider.dart';
 import 'package:example/utils/diacritics.dart';
 import 'package:flutter/material.dart';
-import 'package:idc_fluent2_ui/fluent_icons.dart';
-import 'package:idc_fluent2_ui/idc_fluent2_ui.dart';
+import 'package:fluent2ui/fluent_icons.dart';
+import 'package:fluent2ui/fluent2ui.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({super.key});

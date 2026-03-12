@@ -1,6 +1,6 @@
 import 'dart:ui';
 
-import 'package:idc_fluent2_ui/src/fluent_models/fluent_font_weight.dart';
+import 'package:fluent2ui/src/fluent_models/fluent_font_weight.dart';
 
 abstract interface class FluentTextStyle {
   final double? fluentSize;

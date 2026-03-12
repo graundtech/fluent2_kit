@@ -1,4 +1,4 @@
-import 'package:idc_fluent2_ui/src/fluent_models/fluent_size.dart';
+import 'package:fluent2ui/src/fluent_models/fluent_size.dart';
 
 class MixedFluentSize {
   final FluentSize _size;

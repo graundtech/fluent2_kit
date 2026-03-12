@@ -1,7 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/semantics.dart';
-import 'package:idc_fluent2_ui/idc_fluent2_ui.dart';
+import 'package:fluent2ui/fluent2ui.dart';
 
 class FluentRadioButton<T> extends StatefulWidget {
   /// The radio button itself does not maintain any state. Instead, when the

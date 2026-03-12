@@ -1,5 +1,5 @@
-import 'package:idc_fluent2_ui/src/fluent_models/fluent_shadow_theme.dart';
-import 'package:idc_fluent2_ui/src/fluent_with_material/mixed_fluent_shadow.dart';
+import 'package:fluent2ui/src/fluent_models/fluent_shadow_theme.dart';
+import 'package:fluent2ui/src/fluent_with_material/mixed_fluent_shadow.dart';
 
 class MixedFluentShadowTheme implements FluentShadowTheme {
   @override

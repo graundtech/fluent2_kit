@@ -2,7 +2,7 @@ import 'package:example/screens/dev_leticya/l_home_view/l_home_view.dart';
 import 'package:example/screens/dev_railson/r_home_view/r_home_view.dart';
 import 'package:example/theme_mode_provider.dart';
 import 'package:flutter/material.dart';
-import 'package:idc_fluent2_ui/idc_fluent2_ui.dart';
+import 'package:fluent2ui/fluent2ui.dart';
 
 import '../dev_brunno/b_home.dart';
 

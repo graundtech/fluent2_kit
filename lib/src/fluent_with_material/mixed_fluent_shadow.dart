@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:idc_fluent2_ui/src/fluent_models/fluent_shadow.dart';
+import 'package:fluent2ui/src/fluent_models/fluent_shadow.dart';
 
 class MixedFluentShadow implements FluentShadow {
   final BoxShadow boxShadow1;

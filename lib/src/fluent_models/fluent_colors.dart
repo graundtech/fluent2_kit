@@ -1,5 +1,5 @@
 import 'package:flutter/cupertino.dart';
-import 'package:idc_fluent2_ui/idc_fluent2_ui.dart';
+import 'package:fluent2ui/fluent2ui.dart';
 
 class FluentColors {
   static const Color controlsSegmentForeground2Rest = Color(0xFF616161);
