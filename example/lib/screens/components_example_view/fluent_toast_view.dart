@@ -22,7 +22,7 @@ class FluentToastView extends StatelessWidget {
             ),
           )).show(
         context: context,
-        duration: null,
+        duration: const Duration(seconds: 3),
         onDismissed: () {
           print("Fechou!");
         },

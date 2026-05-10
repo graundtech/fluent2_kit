@@ -192,7 +192,7 @@ class _HomeViewState extends State<HomeView> {
       appBar: FluentNavBar(
         title: NavLeftSubtitle(
           title: "Fluent 2 UI",
-          subtitle: "Developed by Grbtec",
+          subtitle: "Developed by Graund Tech",
         ),
         themeColorVariation: FluentThemeColorVariation.brand,
         actions: [

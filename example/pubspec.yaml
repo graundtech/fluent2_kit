@@ -11,9 +11,6 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  gbt_essentials:
-    hosted: https://dart.indicacode.com
-    version: ^1.1.3
   fluent2ui:
     path: ../
   get: ^4.6.6
@@ -22,9 +19,6 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  gbt_lints:
-    hosted: https://dart.indicacode.com
-    version: ^1.0.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

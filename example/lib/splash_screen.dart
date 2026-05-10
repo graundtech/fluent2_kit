@@ -22,7 +22,7 @@ class SplashScreenView extends StatelessWidget {
                 Expanded(
                   child: Center(
                     child: Image.asset(
-                      'assets/images/gbt_fluent2_ui.png',
+                      'assets/images/fluent2ui.png',
                       width: 120,
                       height: 120,
                     ),
