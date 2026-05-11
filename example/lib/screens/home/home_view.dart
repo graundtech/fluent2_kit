@@ -30,6 +30,13 @@ class _HomeViewState extends State<HomeView> {
       previewIcon: FluentIcons.button_20_regular,
     ),
     CardComponentPage(
+      title: "Fluent FAB",
+      description:
+          "A floating action button (FAB) performs the primary, or most common, action on a screen.",
+      route: Routes.fluentFabView,
+      previewIcon: FluentIcons.add_circle_24_regular,
+    ),
+    CardComponentPage(
       title: "Fluent Avatar",
       description:
           "An avatar shows an image or text to represent a person or group as well as gives additional information like their status and activity.",

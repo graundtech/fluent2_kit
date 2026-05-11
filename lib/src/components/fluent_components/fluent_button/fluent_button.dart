@@ -34,24 +34,6 @@ class FluentButton extends StatelessWidget {
     this.foregroundColor,
   });
 
-  returnButtonTextStyle({size, fluentTheme}) {
-    return switch (size) {
-      FluentButtonSize.small =>
-        fluentTheme.fluentTextTheme?.caption1Strong?.fluentCopyWith(
-          fluentColor: Colors.white,
-        ),
-      FluentButtonSize.medium =>
-        fluentTheme.fluentTextTheme?.caption1Strong?.fluentCopyWith(
-          fluentColor: Colors.white,
-        ),
-      FluentButtonSize.large =>
-        fluentTheme.fluentTextTheme?.body1Strong?.fluentCopyWith(
-          fluentColor: Colors.white,
-        ),
-      _ => null,
-    };
-  }
-
   @override
   Widget build(BuildContext context) {
     final icon = this.icon;

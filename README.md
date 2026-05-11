@@ -417,11 +417,13 @@ FluentAvatar(
 
 ## Fluent Button
 
+Standard action button. `title` and `onPressed` are required; everything else is optional.
+
 ### Sizes
-The FluentButtonSize class has the following variations:
-- `Large`
-- `Medium`
-- `Small`
+The `FluentButtonSize` class has the following variations:
+- `Large` (52pt)
+- `Medium` (40pt, default)
+- `Small` (28pt)
 
 ```dart
 FluentButton(
@@ -433,7 +435,7 @@ FluentButton(
 ### Variants
 The `FluentButtonVariant` class contains the following variants:
 
-- `Accent`
+- `Accent` (default)
 - `Outline Accent`
 - `Outline`
 - `Subtle`
@@ -442,6 +444,72 @@ The `FluentButtonVariant` class contains the following variants:
 FluentButton(
   title: "Click Me",
   variant: FluentButtonVariant.accent,
+  onPressed: () {},
+)
+```
+
+### Leading icon
+
+Pass an `Icon` to render before the label.
+
+```dart
+FluentButton(
+  title: "Like",
+  icon: Icon(FluentIcons.heart_12_filled),
+  onPressed: () {},
+)
+```
+
+### Disabled
+
+Pass `onPressed: null` to render the disabled state.
+
+```dart
+FluentButton(
+  title: "Click Me",
+  onPressed: null,
+)
+```
+
+### Full width
+
+Set `isFullWidget: true` to stretch the button to the available width.
+
+```dart
+FluentButton(
+  title: "Continue",
+  isFullWidget: true,
+  onPressed: () {},
+)
+```
+
+</br>
+
+## Fluent FAB
+
+Floating action button (FAB) for a screen's primary action. Renders as a circular icon-only button by default, or as an extended pill when a `label` is provided.
+
+### Sizes
+The `FluentFabSize` class has the following variations:
+- `Large` (default, 56pt)
+- `Small` (48pt)
+
+### Variants
+The `FluentFabVariant` class contains the following variants:
+- `Accent` (default, brand background)
+- `Subtle` (neutral background)
+
+```dart
+// Icon-only FAB
+FluentFab(
+  icon: FluentIcons.add_24_filled,
+  onPressed: () {},
+)
+
+// Extended FAB with label
+FluentFab(
+  icon: FluentIcons.add_24_filled,
+  label: "Create",
   onPressed: () {},
 )
 ```
@@ -763,6 +831,9 @@ FluentButton(
 </br>
 
 ## Fluent Text Field
+
+Underlined text input mirroring the Microsoft Fluent 2 iOS spec. Supports a floating label, hint (placeholder), assistive/error text, prefix and suffix icons, and an automatic trailing dismiss icon when the field is focused and not empty.
+
 ```dart
 FluentTextField(
   label: "Last Name",
@@ -777,6 +848,75 @@ FluentTextField(
   assistiveText: error ?? "assistive",
 )
 ```
+
+### Visual states
+
+The component renders the six states defined by the Fluent 2 iOS spec:
+
+```dart
+// Filled — has value, not focused
+FluentTextField(
+  label: "Label",
+  controller: FluentTextFieldController()..textEditingController.text = "Input text",
+  assistiveText: "Assistive text",
+  prefixIcon: Icon(FluentIcons.search_24_regular),
+)
+
+// Placeholder — empty, not focused
+FluentTextField(
+  label: "Label",
+  hintText: "Hint text",
+  assistiveText: "Assistive text",
+  prefixIcon: Icon(FluentIcons.search_24_regular),
+)
+
+// Focused — empty, focused (label and underline turn brand blue)
+FluentTextField(
+  label: "Label",
+  hintText: "Hint text",
+  assistiveText: "Assistive text",
+  prefixIcon: Icon(FluentIcons.search_24_regular),
+  autofocus: true,
+)
+
+// Typing — has value, focused (auto-shows trailing dismiss icon)
+FluentTextField(
+  label: "Label",
+  controller: FluentTextFieldController()..textEditingController.text = "Input text",
+  assistiveText: "Assistive text",
+  prefixIcon: Icon(FluentIcons.search_24_regular),
+)
+
+// Error — label, underline, and assistive text turn red
+FluentTextField(
+  label: "Label",
+  controller: FluentTextFieldController()..textEditingController.text = "Input text",
+  hasError: true,
+  assistiveText: "Password must contain 8 characters and include letters, numbers and symbols",
+  prefixIcon: Icon(FluentIcons.search_24_regular),
+)
+
+// Disabled — hint text uses the disabled neutral foreground (#BDBDBD)
+FluentTextField(
+  label: "Label",
+  hintText: "Hint text",
+  assistiveText: "Assistive text",
+  prefixIcon: Icon(FluentIcons.lock_closed_24_regular),
+  enabled: false,
+)
+```
+
+### Additional capabilities
+
+`FluentTextField` also exposes the underlying Flutter `TextField` surface for advanced use cases:
+
+- **Multi-line input**: `maxLines`, `expands`, `scrollController`.
+- **Character counter**: `maxLength`, `buildCounter`.
+- **Password / obscured input**: `obscureText`, `obscuringCharacter`.
+- **Prefix variants**: `prefixIcon` (icon column on the left) and `prefix` (inline widget inside the input).
+- **Cursor customization**: `cursorErrorColor`, `cursorHeight`, custom magnifier via `magnifierConfiguration`.
+- **Input behavior**: `keyboardType`, `inputFormatters`, `autocorrect`, `enableSuggestions`, `autofocus`, `canRequestFocus`, `clipBehavior`, `textAlign`.
+- **Callbacks**: `onChanged`, `onTap`, `onEditingComplete`, `onSubmitted`.
 
 
 

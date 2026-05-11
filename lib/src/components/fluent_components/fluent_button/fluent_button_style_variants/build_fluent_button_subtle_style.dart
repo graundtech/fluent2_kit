@@ -30,7 +30,9 @@ ButtonStyle _buildFluentButtonSubtleStyle(
               FluentColors.neutralStrokeFocus2Rest,
               FluentDarkColors.neutralStrokeFocus2Rest,
             ),
-            width: FluentStrokeThickness.strokeWidth20.value,
+            width: size == FluentButtonSize.large
+                ? FluentStrokeThickness.strokeWidth30.value
+                : FluentStrokeThickness.strokeWidth20.value,
           ),
           borderRadius: BorderRadius.circular(
             size == FluentButtonSize.large

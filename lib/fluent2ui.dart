@@ -33,6 +33,7 @@ export 'package:fluent2ui/src/components/fluent_components/presence_badges.dart'
 export 'package:fluent2ui/src/components/fluent_components/fluent_search_bar/fluent_search_bar.dart';
 export 'package:fluent2ui/src/components/fluent_components/fluent_text_field/fluent_text_field.dart';
 export 'package:fluent2ui/src/components/fluent_components/fluent_button/fluent_button.dart';
+export 'package:fluent2ui/src/components/fluent_components/fluent_fab/fluent_fab.dart';
 export 'package:fluent2ui/src/components/fluent_components/fluent_radio_button.dart';
 export 'package:fluent2ui/src/components/fluent_components/fluent_checkbox/fluent_checkbox.dart';
 export 'package:fluent2ui/src/components/fluent_components/fluent_card.dart';

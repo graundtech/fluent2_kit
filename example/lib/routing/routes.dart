@@ -1,6 +1,7 @@
 import 'package:example/screens/components_example_view/fluent_avatar_view.dart';
 import 'package:example/screens/components_example_view/fluent_banner_view.dart';
 import 'package:example/screens/components_example_view/fluent_button_view.dart';
+import 'package:example/screens/components_example_view/fluent_fab_view.dart';
 import 'package:example/screens/components_example_view/fluent_card_view.dart';
 import 'package:example/screens/components_example_view/fluent_controls_view.dart';
 import 'package:example/screens/components_example_view/fluent_list_view/clear_search_history_view.dart';
@@ -29,6 +30,7 @@ abstract final class Routes {
   static const fluentBannerView = "/fluentBannerView";
   static const fluentSheetView = "/fluentSheetView";
   static const fluentButtonView = "/fluentButtonView";
+  static const fluentFabView = "/fluentFabView";
   static const fluentCardView = "/fluentCardView";
   static const fluentToastView = "/fluentToastView";
   static const fluentTextFieldView = "/fluentTextField";
@@ -64,6 +66,9 @@ abstract final class Routes {
         },
         Routes.fluentButtonView: (_) {
           return FluentButtonView();
+        },
+        Routes.fluentFabView: (_) {
+          return FluentFabView();
         },
         Routes.fluentCardView: (_) {
           return FluentCardView();

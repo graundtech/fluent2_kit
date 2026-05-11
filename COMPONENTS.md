@@ -24,6 +24,9 @@ Short descriptions of each component in `fluent2ui`. Use this as a quick guide w
 - `FluentButtonStyle`: internal style bag used by button variant builders.
 - `FluentButtonVariant`: `accent`, `outlineAccent`, `outline`, `subtle`.
 - `FluentButtonSize`: `small`, `medium`, `large`.
+- `FluentFab`: floating action button (circular icon-only or extended with label) with `accent`/`subtle` variants and `large`/`small` sizes.
+- `FluentFabVariant`: `accent`, `subtle`.
+- `FluentFabSize`: `large`, `small`.
 - `FluentChip`: compact label pill with optional avatar/icon and color styles.
 - `FluentChipColor`: semantic palette for chips (`brand`, `danger`, `severe`, `warning`, `success`, `neutral`).
 - `FluentChipColorStyle`: `tint`, `filled`, `disabled`.

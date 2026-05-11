@@ -295,6 +295,15 @@ class _FluentTextFieldState extends State<FluentTextField> {
                         width: FluentStrokeThickness.strokeWidth05.value,
                       ),
                     ),
+                    disabledBorder: UnderlineInputBorder(
+                      borderSide: BorderSide(
+                        width: FluentStrokeThickness.strokeWidth05.value,
+                        color: colorMode(
+                          FluentColors.neutralStroke1Rest,
+                          FluentDarkColors.neutralStroke1Rest,
+                        ),
+                      ),
+                    ),
                     focusedBorder: UnderlineInputBorder(
                       borderSide: BorderSide(
                         width: FluentStrokeThickness.strokeWidth05.value,
@@ -310,10 +319,10 @@ class _FluentTextFieldState extends State<FluentTextField> {
                     ),
                     hintStyle:
                         fluentTheme.fluentTextTheme?.body1?.fluentCopyWith(
-                      fluentColor: hasFocus.value
+                      fluentColor: enabled == false
                           ? colorMode(
-                              FluentColors.neutralForeground1Rest,
-                              FluentDarkColors.neutralForeground1Rest,
+                              FluentColors.neutralForegroundDisabled1Rest,
+                              FluentDarkColors.neutralForegroundDisabled1Rest,
                             )
                           : colorMode(
                               FluentColors.neutralForeground2Rest,

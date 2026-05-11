@@ -41,7 +41,9 @@ ButtonStyle _buildFluentButtonOutlineAccentStyle(
             WidgetState.focused => RoundedRectangleBorder(
                 side: BorderSide(
                     color: strokeFocusedColor,
-                    width: FluentStrokeThickness.strokeWidth20.value),
+                    width: size == FluentButtonSize.large
+                        ? FluentStrokeThickness.strokeWidth30.value
+                        : FluentStrokeThickness.strokeWidth20.value),
                 borderRadius: BorderRadius.circular(
                   size == FluentButtonSize.large
                       ? FluentCornerRadius.xLarge.value

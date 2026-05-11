@@ -10,19 +10,19 @@ class FluentTextFieldView extends StatefulWidget {
 }
 
 class _FluentTextFieldViewState extends State<FluentTextFieldView> {
-  final FluentTextFieldController controller = FluentTextFieldController();
-
-  String? error;
+  late final FluentTextFieldController filledController;
+  late final FluentTextFieldController typingController;
+  late final FluentTextFieldController errorController;
 
   @override
   void initState() {
     super.initState();
-
-    Future.delayed(Duration(seconds: 3)).whenComplete(() {
-      setState(() {
-        error = "Fake error";
-      });
-    });
+    filledController = FluentTextFieldController()
+      ..textEditingController.text = "Input text";
+    typingController = FluentTextFieldController()
+      ..textEditingController.text = "Input text";
+    errorController = FluentTextFieldController()
+      ..textEditingController.text = "Input text";
   }
 
   @override
@@ -39,52 +39,67 @@ class _FluentTextFieldViewState extends State<FluentTextFieldView> {
           mainAxisSize: MainAxisSize.max,
           children: [
             FluentSectionDescription(
-                description:
-                    "Assistive texts, icons and suffixes are optional and hidden by default in the text fields components."),
+              description:
+                  "Assistive texts, icons and suffixes are optional and hidden by default in the text fields components.",
+            ),
             FluentContainer(
               padding: EdgeInsets.symmetric(
                 vertical: FluentSize.size240.value,
                 horizontal: FluentSize.size160.value,
               ),
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
+                  _StateLabel("Filled"),
                   FluentTextField(
-                    label: "Name",
-                    hintText: "Timothy",
-                    suffixIcon: Icon(FluentIcons.eye_24_regular),
-                    controller: controller,
+                    label: "Label",
+                    controller: filledController,
+                    assistiveText: "Assistive text",
+                    prefixIcon: Icon(FluentIcons.search_24_regular),
                   ),
-                  SizedBox(height: FluentSize.size120.value),
+                  SizedBox(height: FluentSize.size240.value),
+                  _StateLabel("Placeholder"),
                   FluentTextField(
-                    label: "Last Name",
-                    hintText: "Ballinger",
-                    hasError: error != null,
-                    assistiveText: error ?? "assistive",
+                    label: "Label",
+                    hintText: "Hint text",
+                    assistiveText: "Assistive text",
+                    prefixIcon: Icon(FluentIcons.search_24_regular),
                   ),
-                  SizedBox(height: FluentSize.size120.value),
+                  SizedBox(height: FluentSize.size240.value),
+                  _StateLabel("Focused"),
                   FluentTextField(
-                    label: "Read Only Example",
-                    hintText: "Read Only",
-                    readOnly: true,
+                    label: "Label",
+                    hintText: "Hint text",
+                    assistiveText: "Assistive text",
+                    prefixIcon: Icon(FluentIcons.search_24_regular),
+                    autofocus: true,
                   ),
-                  SizedBox(height: FluentSize.size120.value),
+                  SizedBox(height: FluentSize.size240.value),
+                  _StateLabel("Typing"),
                   FluentTextField(
-                    label: "Password",
-                    hintText: "Password",
-                    obscureText: true,
+                    label: "Label",
+                    controller: typingController,
+                    assistiveText: "Assistive text",
+                    prefixIcon: Icon(FluentIcons.search_24_regular),
                   ),
-                  SizedBox(height: FluentSize.size120.value),
+                  SizedBox(height: FluentSize.size240.value),
+                  _StateLabel("Error"),
                   FluentTextField(
-                    hintText: "Read Only",
-                    readOnly: true,
-                    controller: FluentTextFieldController()..textEditingController.text = "Copy me\n2\n3\n4",
-                    // maxLines: 1,
+                    label: "Label",
+                    controller: errorController,
+                    hasError: true,
+                    assistiveText:
+                        "Password must contain 8 characters and include letters, numbers and symbols",
+                    prefixIcon: Icon(FluentIcons.search_24_regular),
                   ),
-                  SizedBox(height: FluentSize.size120.value),
+                  SizedBox(height: FluentSize.size240.value),
+                  _StateLabel("Disabled"),
                   FluentTextField(
-                    hintText: "No Label",
-                    // maxLines: 1,
+                    label: "Label",
+                    hintText: "Hint text",
+                    assistiveText: "Assistive text",
+                    prefixIcon: Icon(FluentIcons.lock_closed_24_regular),
+                    enabled: false,
                   ),
                   SizedBox(height: FluentSize.size480.value),
                   FluentButton(
@@ -98,6 +113,30 @@ class _FluentTextFieldViewState extends State<FluentTextFieldView> {
             ),
           ],
         ),
+      ),
+    );
+  }
+}
+
+class _StateLabel extends StatelessWidget {
+  final String text;
+  const _StateLabel(this.text);
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.only(bottom: FluentSize.size40.value),
+      child: FluentText(
+        text,
+        style: FluentThemeDataModel.of(context)
+            .fluentTextTheme
+            ?.caption2
+            ?.fluentCopyWith(
+              fluentColor: createColorMode(Theme.of(context).brightness)(
+                FluentColors.neutralForeground2Rest,
+                FluentDarkColors.neutralForeground2Rest,
+              ),
+            ),
       ),
     );
   }
