@@ -10,6 +10,7 @@ import 'package:example/screens/components_example_view/fluent_nav_bar_view.dart
 import 'package:example/screens/components_example_view/fluent_popover_view.dart';
 import 'package:example/screens/components_example_view/fluent_presence_badges_view.dart';
 import 'package:example/screens/components_example_view/fluent_progress_indicators_view.dart';
+import 'package:example/screens/components_example_view/fluent_segmented_control_view.dart';
 import 'package:example/screens/components_example_view/fluent_sheet_view.dart';
 import 'package:example/screens/components_example_view/fluent_tab_bar_view.dart';
 import 'package:example/screens/components_example_view/fluent_text_field_view.dart';
@@ -40,6 +41,7 @@ abstract final class Routes {
   static const fluentPresenceBadgesView = "/fluentPresenceBadgesView";
   static const fluentNavBarView = "/fluentNavBarView";
   static const fluentTabBarView = "/fluentTabBarView";
+  static const fluentSegmentedControlView = "/fluentSegmentedControlView";
   static const innerAspectRatioView = "/innerAspectRatioView";
   static const clearSearchHistoryView = "/clearSearchHistoryView";
 
@@ -96,6 +98,9 @@ abstract final class Routes {
         },
         Routes.fluentTabBarView: (_) {
           return FluentTabBarView();
+        },
+        Routes.fluentSegmentedControlView: (_) {
+          return FluentSegmentedControlView();
         },
         Routes.innerAspectRatioView: (_) {
           return InnerAspectRatioView();

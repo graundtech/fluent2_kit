@@ -118,6 +118,13 @@ class _HomeViewState extends State<HomeView> {
       previewIcon: FluentIcons.tabs_20_regular,
     ),
     CardComponentPage(
+      title: "Fluent Segmented Control",
+      description:
+          "Segmented controls let people pick one option from a small set of mutually exclusive choices.",
+      route: Routes.fluentSegmentedControlView,
+      previewIcon: FluentIcons.layout_row_two_20_regular,
+    ),
+    CardComponentPage(
       title: "Inner Aspect Ratio",
       description:
           "Enforces an aspect ratio relative to the child's longest side.",

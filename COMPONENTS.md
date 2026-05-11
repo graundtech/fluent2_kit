@@ -43,6 +43,10 @@ Short descriptions of each component in `fluent2ui`. Use this as a quick guide w
 - `FluentCheckbox`: circular checkbox built from a `Checkbox` with Fluent colors.
 - `FluentRadioButton<T>`: Fluent-styled radio button with custom painter and theme wiring.
 - `FluentSwitchToggle`: Fluent-colored `CupertinoSwitch`.
+- `FluentSegmentedControl<T>`: segmented selector with text-item or icon-item constructors and bidirectional controller wiring.
+- `FluentSegmentedController<T>`: `ValueNotifier<T?>` controller for the selected segment value.
+- `FluentSegmentedControlType`: `tabs` (sliding thumb track) or `pillButton` (separate spaced pills).
+- `FluentSegmentedControlVariant`: `neutral` or `brand` color palette.
 
 ## Text, Icons, Avatars
 - `FluentText`: `Text` wrapper that accepts Fluent text styles.

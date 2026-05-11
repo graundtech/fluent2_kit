@@ -12,6 +12,7 @@ dependencies:
   flutter:
     sdk: flutter
   fluentui_system_icons: ^1.1.223
+  custom_sliding_segmented_control: ^1.7.4
 
 dev_dependencies:
   lints: ^3.0.0

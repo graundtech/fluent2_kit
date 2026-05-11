@@ -755,6 +755,56 @@ FluentSwitchToggle(
 
 </br>
 
+## Fluent Segmented Control
+
+Lets people pick one option from a small set of mutually exclusive choices. Use the named constructors `.textItems` or `.iconItems`.
+
+### Types
+`FluentSegmentedControlType` values:
+- `tabs` (default): a sliding thumb inside a single pill track.
+- `pillButton`: separate, spaced pills.
+
+### Variants
+`FluentSegmentedControlVariant` values:
+- `neutral` (default): neutral track with brand-colored selected segment.
+- `brand`: brand track with neutral-colored selected segment.
+
+### Text items
+
+```dart
+final controller = FluentSegmentedController<Sky>(value: Sky.midnight);
+
+FluentSegmentedControl<Sky>.textItems(
+  fluentController: controller,
+  textItems: const {
+    Sky.midnight: "Midnight",
+    Sky.viridian: "Viridian",
+    Sky.cerulean: "Cerulean",
+  },
+  onValueChanged: (value) {
+    // handle selection
+  },
+)
+```
+
+### Icon items (pill button, brand)
+
+```dart
+FluentSegmentedControl<ViewMode>.iconItems(
+  segmentType: FluentSegmentedControlType.pillButton,
+  variant: FluentSegmentedControlVariant.brand,
+  iconItems: const {
+    ViewMode.grid: FluentIcons.grid_20_regular,
+    ViewMode.list: FluentIcons.list_20_regular,
+  },
+  onValueChanged: (value) {
+    // handle selection
+  },
+)
+```
+
+</br>
+
 ## Fluent Banner
 
 ```dart

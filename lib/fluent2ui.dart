@@ -35,6 +35,8 @@ export 'package:fluent2ui/src/components/fluent_components/fluent_text_field/flu
 export 'package:fluent2ui/src/components/fluent_components/fluent_button/fluent_button.dart';
 export 'package:fluent2ui/src/components/fluent_components/fluent_fab/fluent_fab.dart';
 export 'package:fluent2ui/src/components/fluent_components/fluent_radio_button.dart';
+export 'package:fluent2ui/src/components/fluent_components/fluent_segmented_control/fluent_segmented_control.dart';
+export 'package:fluent2ui/src/components/fluent_components/fluent_segmented_control/fluent_segmented_controller.dart';
 export 'package:fluent2ui/src/components/fluent_components/fluent_checkbox/fluent_checkbox.dart';
 export 'package:fluent2ui/src/components/fluent_components/fluent_card.dart';
 export 'package:fluent2ui/src/components/fluent_components/fluent_card_container.dart';
