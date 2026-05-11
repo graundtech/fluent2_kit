@@ -165,30 +165,36 @@ class FluentAvatarView extends StatelessWidget {
                 subtext: "System all the way down, man!",
                 leading: FluentAvatar(
                   size: FluentAvatarSize.size56,
-                  cutout: Icon(
-                    FluentIcons.heart_12_filled,
-                    size: FluentSize.size160.value,
-                  ),
+                  statusPresenceBadge: StatusPresenceBadge.dnd,
                   child: Image.asset(
-                    'assets/images/avatars/avatar1.jpeg',
+                    'assets/images/avatars/avatar5.jpeg',
                     width: double.maxFinite,
                     height: double.maxFinite,
                     fit: BoxFit.cover,
                   ),
                 ),
               ),
-              FluentStrokeDivider(
-                startIndent: FluentStrokeBorderIndent.strokeIndent56,
-                height: 0,
+              FluentSectionHeader(title: "Cutout"),
+              Padding(
+                padding: EdgeInsets.only(
+                    right: FluentSize.size160.value,
+                    left: FluentSize.size160.value,
+                    bottom: FluentSize.size160.value),
+                child: FluentText(
+                  "Cutouts overlay an avatar with dynamic information for notifications and activity feeds. Available only for size 40 and 56 avatars.",
+                ),
               ),
               FluentListItemMultiLine(
                 text: "Cody Fisher",
                 subtext: "System all the way down, man!",
                 leading: FluentAvatar(
                   size: FluentAvatarSize.size56,
-                  statusPresenceBadge: StatusPresenceBadge.dnd,
+                  cutout: Icon(
+                    FluentIcons.heart_12_filled,
+                    size: FluentSize.size160.value,
+                  ),
                   child: Image.asset(
-                    'assets/images/avatars/avatar5.jpeg',
+                    'assets/images/avatars/avatar1.jpeg',
                     width: double.maxFinite,
                     height: double.maxFinite,
                     fit: BoxFit.cover,

@@ -3,12 +3,17 @@ import 'package:example/screens/components_example_view/fluent_banner_view.dart'
 import 'package:example/screens/components_example_view/fluent_button_view.dart';
 import 'package:example/screens/components_example_view/fluent_card_view.dart';
 import 'package:example/screens/components_example_view/fluent_controls_view.dart';
+import 'package:example/screens/components_example_view/fluent_list_view/clear_search_history_view.dart';
 import 'package:example/screens/components_example_view/fluent_list_view/fluent_list_example_view.dart';
+import 'package:example/screens/components_example_view/fluent_nav_bar_view.dart';
 import 'package:example/screens/components_example_view/fluent_popover_view.dart';
+import 'package:example/screens/components_example_view/fluent_presence_badges_view.dart';
 import 'package:example/screens/components_example_view/fluent_progress_indicators_view.dart';
 import 'package:example/screens/components_example_view/fluent_sheet_view.dart';
+import 'package:example/screens/components_example_view/fluent_tab_bar_view.dart';
 import 'package:example/screens/components_example_view/fluent_text_field_view.dart';
 import 'package:example/screens/components_example_view/fluent_toast_view.dart';
+import 'package:example/screens/components_example_view/inner_aspect_ratio_view.dart';
 import 'package:example/screens/design_tokens_view/shadow_view.dart';
 import 'package:example/screens/design_tokens_view/shapes_view.dart';
 import 'package:example/screens/design_tokens_view/size_view.dart';
@@ -30,6 +35,11 @@ abstract final class Routes {
   static const fluentProgressIndicatorsView = "/fluentProgressIndicatorsView";
   static const fluentControlsView = "/fluentControlsView";
   static const fluentPopoverView = "/fluentPopoverView";
+  static const fluentPresenceBadgesView = "/fluentPresenceBadgesView";
+  static const fluentNavBarView = "/fluentNavBarView";
+  static const fluentTabBarView = "/fluentTabBarView";
+  static const innerAspectRatioView = "/innerAspectRatioView";
+  static const clearSearchHistoryView = "/clearSearchHistoryView";
 
   static const shadowView = "/shadowView";
   static const shapesView = "/shapesView";
@@ -72,6 +82,21 @@ abstract final class Routes {
         },
         Routes.fluentPopoverView: (_) {
           return FluentPopoverView();
+        },
+        Routes.fluentPresenceBadgesView: (_) {
+          return FluentPresenceBadgesView();
+        },
+        Routes.fluentNavBarView: (_) {
+          return FluentNavBarView();
+        },
+        Routes.fluentTabBarView: (_) {
+          return FluentTabBarView();
+        },
+        Routes.innerAspectRatioView: (_) {
+          return InnerAspectRatioView();
+        },
+        Routes.clearSearchHistoryView: (_) {
+          return ClearSearchHistoryView();
         },
         Routes.shadowView: (_) {
           return ShadowView();

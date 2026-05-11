@@ -148,6 +148,58 @@ class _FluentProgressIndicatorsViewState
                 onPressed: () => updateDate(showHUD: true),
               ),
             ),
+            FluentSectionHeader(title: "Fluent Circular Progress Indicator"),
+            Padding(
+              padding:
+                  EdgeInsets.symmetric(horizontal: FluentSize.size160.value),
+              child: FluentText(
+                "Circular indicators come in five sizes and support both indeterminate and determinate progress.",
+                style: FluentThemeDataModel.of(context).fluentTextTheme?.body2,
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.symmetric(vertical: FluentSize.size160.value),
+              child: Wrap(
+                alignment: WrapAlignment.center,
+                crossAxisAlignment: WrapCrossAlignment.center,
+                spacing: FluentSize.size240.value,
+                runSpacing: FluentSize.size160.value,
+                children: [
+                  for (final size in FluentCircularProgressIndicatorSize.values)
+                    Column(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        FluentCircularProgressIndicator(size: size),
+                        SizedBox(height: FluentSize.size80.value),
+                        FluentText(
+                          size
+                              .toString()
+                              .split('.')
+                              .last,
+                          style: FluentThemeDataModel.of(context)
+                              .fluentTextTheme
+                              ?.caption2,
+                        ),
+                      ],
+                    ),
+                ],
+              ),
+            ),
+            Padding(
+              padding:
+                  EdgeInsets.symmetric(horizontal: FluentSize.size160.value),
+              child: FluentText(
+                "Determinate (value: 0.4):",
+                style: FluentThemeDataModel.of(context).fluentTextTheme?.body2,
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.symmetric(vertical: FluentSize.size160.value),
+              child: FluentCircularProgressIndicator(
+                size: FluentCircularProgressIndicatorSize.large,
+                value: 0.4,
+              ),
+            ),
           ],
         ),
       ),

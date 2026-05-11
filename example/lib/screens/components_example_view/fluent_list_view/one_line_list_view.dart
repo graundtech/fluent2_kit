@@ -1,9 +1,18 @@
+import 'package:example/routing/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:fluent2ui/fluent_icons.dart';
 import 'package:fluent2ui/fluent2ui.dart';
 
-class OneLineListExampleView extends StatelessWidget {
+class OneLineListExampleView extends StatefulWidget {
   const OneLineListExampleView({super.key});
+
+  @override
+  State<OneLineListExampleView> createState() => _OneLineListExampleViewState();
+}
+
+class _OneLineListExampleViewState extends State<OneLineListExampleView> {
+  bool optionalConnectedExperiences1 = true;
+  bool optionalConnectedExperiences2 = true;
 
   @override
   Widget build(BuildContext context) {
@@ -66,6 +75,10 @@ class OneLineListExampleView extends StatelessWidget {
                     trailing: FluentIcon(
                       FluentIcons.chevron_right_20_filled,
                     ),
+                    onTap: () {
+                      Navigator.of(context)
+                          .pushNamed(Routes.clearSearchHistoryView);
+                    },
                   ),
                 ],
               ),
@@ -76,15 +89,23 @@ class OneLineListExampleView extends StatelessWidget {
                   FluentListItemOneLine(
                     text: "Optional Connected Experiences",
                     trailing: FluentSwitchToggle(
-                      value: true,
-                      onChanged: (value) {},
+                      value: optionalConnectedExperiences1,
+                      onChanged: (value) {
+                        setState(() {
+                          optionalConnectedExperiences1 = value;
+                        });
+                      },
                     ),
                   ),
                   FluentListItemOneLine(
                     text: "Optional Connected Experiences",
                     trailing: FluentSwitchToggle(
-                      value: true,
-                      onChanged: (value) {},
+                      value: optionalConnectedExperiences2,
+                      onChanged: (value) {
+                        setState(() {
+                          optionalConnectedExperiences2 = value;
+                        });
+                      },
                     ),
                   )
                 ],

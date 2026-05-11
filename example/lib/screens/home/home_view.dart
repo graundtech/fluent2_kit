@@ -88,7 +88,35 @@ class _HomeViewState extends State<HomeView> {
       description: 'Popover Components',
       route: Routes.fluentPopoverView,
       previewIcon: FluentIcons.square_24_regular,
-    )
+    ),
+    CardComponentPage(
+      title: "Presence Badges",
+      description:
+          "Presence badges indicate availability and are overlaid on avatars.",
+      route: Routes.fluentPresenceBadgesView,
+      previewIcon: FluentIcons.presence_available_12_filled,
+    ),
+    CardComponentPage(
+      title: "Fluent Nav Bar",
+      description:
+          "Nav bars expose four title variants: left/center, with or without subtitle.",
+      route: Routes.fluentNavBarView,
+      previewIcon: FluentIcons.line_horizontal_3_20_regular,
+    ),
+    CardComponentPage(
+      title: "Fluent Tab Bar",
+      description:
+          "Tab bars support bottom label, no label and right label item variants.",
+      route: Routes.fluentTabBarView,
+      previewIcon: FluentIcons.tabs_20_regular,
+    ),
+    CardComponentPage(
+      title: "Inner Aspect Ratio",
+      description:
+          "Enforces an aspect ratio relative to the child's longest side.",
+      route: Routes.innerAspectRatioView,
+      previewIcon: FluentIcons.crop_20_regular,
+    ),
   ];
 
   final designTokens = <DesignTokenItem>[
