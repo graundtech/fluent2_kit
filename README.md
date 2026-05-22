@@ -11,9 +11,6 @@ and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/developing-packages). 
 -->
 
-![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/graundtech/fluent2_kit/publish_public.yaml)
-
-
 <p align="center">
   <img src="https://github.com/graundtech/fluent2_kit/assets/94455123/05470ad4-c025-4e3f-b05a-776e90abaef8" width="200" />
 </p>
@@ -69,6 +66,36 @@ FluentNavBar(...)                    // mobile Fluent 2 nav from fluent2_kit
 - Almost no dependencies but Flutter
 
 </br>
+
+## Local Android example builds
+
+The example app can be packaged locally on demand:
+
+```sh
+scripts/build_android_example.sh --apk
+```
+
+Useful options:
+
+```sh
+scripts/build_android_example.sh --aab
+scripts/build_android_example.sh --both --clean
+scripts/build_android_example.sh --apk --build-number 49 --build-name 1.0.6
+scripts/build_android_example.sh --apk --skip-tests
+```
+
+Signed release builds use `example/android/key.properties` when present.
+Without it, the Android project falls back to debug signing so the APK remains
+installable for local testing.
+
+Example `key.properties`:
+
+```properties
+storeFile=upload-keystore.jks
+storePassword=...
+keyAlias=...
+keyPassword=...
+```
 
 ## Getting started
 
