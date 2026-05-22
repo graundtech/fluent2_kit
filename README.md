@@ -1011,3 +1011,10 @@ This is mainly inspired on the Fluent2 iOS Figma UI Kit. It will be gradually ad
 
 - [Fluent 2 — iOS components](https://fluent2.microsoft.design/components/ios/)
 - [Fluent 2 iOS UI Kit (Figma Community)](https://www.figma.com/community/file/836833645402438850)
+
+## 💛 Acknowledgments
+
+Special thanks to the two main developers behind this project, whose work shaped most of the components and patterns in `fluent2ui`:
+
+- **Leticya Sheyla** — [@LeticyaSheyla](https://github.com/LeticyaSheyla)
+- **Railson Ferreira** — [@railson-ferreira](https://github.com/railson-ferreira)

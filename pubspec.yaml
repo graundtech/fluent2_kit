@@ -6,11 +6,11 @@ repository: https://github.com/graundtech/fluent2ui
 issue_tracker: https://github.com/graundtech/fluent2ui/issues
 
 topics:
-  - ui
-  - design-system
   - fluent
+  - design-system
   - components
-  - material
+  - theming
+  - microsoft
 
 environment:
   sdk: ^3.11.0
