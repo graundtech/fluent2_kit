@@ -41,6 +41,26 @@ import 'package:fluent2_kit/fluent2_kit.dart';
 ```
 </br>
 
+### Coexisting with `fluent_ui`
+
+`fluent2_kit` targets the **Fluent 2 mobile/iOS spec** and uses class names like `FluentButton`, `FluentCard`, `FluentTextField`. The popular [`fluent_ui`](https://pub.dev/packages/fluent_ui) package targets the **Fluent UI desktop/Windows spec** and uses mostly unprefixed names (`Button`, `Card`, `TextBox`), so day-to-day collisions are rare.
+
+If you do use both packages in the same project — for example, a cross-platform app with Windows desktop and iOS/Android targets — import one of them with an alias to avoid ambiguity on framework-level types (`FluentIcons`, `Fluent2ThemeData` vs `FluentThemeData`):
+
+```dart
+import 'package:fluent2_kit/fluent2_kit.dart';
+import 'package:fluent_ui/fluent_ui.dart' as fluent_desktop;
+```
+
+Then reference desktop-only types via the prefix:
+
+```dart
+fluent_desktop.NavigationView(...)   // Windows desktop nav
+FluentNavBar(...)                    // mobile Fluent 2 nav from fluent2_kit
+```
+
+</br>
+
 
 ## ✨ Features
 
