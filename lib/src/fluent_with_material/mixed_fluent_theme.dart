@@ -25,8 +25,8 @@ const Color _kLightThemeSplashColor = Color(0x66C8C8C8);
 const Color _kDarkThemeHighlightColor = Color(0x40CCCCCC);
 const Color _kDarkThemeSplashColor = Color(0x40CCCCCC);
 
-/// GbtFluentThemeData
-class GbtFluentThemeData extends ThemeData implements FluentThemeDataModel {
+/// Fluent2ThemeData
+class Fluent2ThemeData extends ThemeData implements FluentThemeDataModel {
   @override
   final MixedFluentTextTheme? fluentTextTheme;
   @override
@@ -216,7 +216,7 @@ class GbtFluentThemeData extends ThemeData implements FluentThemeDataModel {
       }
     }
 
-    return GbtFluentThemeData.raw(
+    return Fluent2ThemeData.raw(
       fluentTextTheme: fluentTextTheme ?? this.fluentTextTheme,
       fluentStrokeTheme: fluentStrokeTheme ?? this.fluentStrokeTheme,
       fluentShadowTheme: fluentShadowTheme ?? this.fluentShadowTheme,
@@ -338,7 +338,7 @@ class GbtFluentThemeData extends ThemeData implements FluentThemeDataModel {
     );
   }
 
-  const GbtFluentThemeData.raw({
+  const Fluent2ThemeData.raw({
     required this.fluentTextTheme,
     required this.fluentStrokeTheme,
     required this.fluentShadowTheme,
@@ -441,8 +441,8 @@ class GbtFluentThemeData extends ThemeData implements FluentThemeDataModel {
     required super.tooltipTheme,
   }) : super.raw(cupertinoOverrideTheme: null);
 
-  /// GbtFluentThemeData constructor
-  factory GbtFluentThemeData({
+  /// Fluent2ThemeData constructor
+  factory Fluent2ThemeData({
     MixedFluentTextTheme? fluentTextTheme,
     MixedFluentStrokeTheme? fluentStrokeTheme,
     MixedFluentShadowTheme? fluentShadowTheme,
@@ -781,7 +781,7 @@ class GbtFluentThemeData extends ThemeData implements FluentThemeDataModel {
     timePickerTheme ??= const TimePickerThemeData();
     toggleButtonsTheme ??= const ToggleButtonsThemeData();
     tooltipTheme ??= const TooltipThemeData();
-    return GbtFluentThemeData.raw(
+    return Fluent2ThemeData.raw(
       fluentTextTheme: fluentTextTheme,
       fluentStrokeTheme: fluentStrokeTheme,
       fluentShadowTheme: fluentShadowTheme,

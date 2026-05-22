@@ -22,8 +22,12 @@ class FluentSearchBarController {
     _isLoading = !_isLoading;
   }
 
+  void unfocus() {
+    _focus.unfocus();
+  }
+
   FluentSearchBarController() {
-    if (GbtFluent2Debug.printIsEnabled) {
+    if (Fluent2Debug.printIsEnabled) {
       _focus.addListener(() {
         print('focus changed: ${_focus.hasFocus}');
       });

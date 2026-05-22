@@ -6,12 +6,5 @@
   <string>app-store</string> <!-- app-store, ad-hoc, enterprise, development -->
   <key>teamID</key>
   <string>5RWDD3R5HB</string>
-  <key>provisioningProfiles</key>
-	<dict>
-		<key>br.com.grbtec.flutter.fluent2</key>
-		<string>Gbt Fluent2 Example Distribution PP</string>
-		<key>br.com.grbtec.flutter.fluent2</key>
-        <string>Gbt Fluent2 Example Distribution PP - L</string>
-	</dict>
 </dict>
 </plist>

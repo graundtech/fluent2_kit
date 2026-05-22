@@ -1006,3 +1006,8 @@ if (isUpdating)
 ## 📚 Additional information
 
 This is mainly inspired on the Fluent2 iOS Figma UI Kit. It will be gradually adapted to Android as soon as the Microsoft release its Figma UI Kit.
+
+### References
+
+- [Fluent 2 — iOS components](https://fluent2.microsoft.design/components/ios/)
+- [Fluent 2 iOS UI Kit (Figma Community)](https://www.figma.com/community/file/836833645402438850)

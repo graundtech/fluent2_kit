@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fluent2ui/fluent2ui.dart';
+import 'package:fluent2ui/fluent_icons.dart';
 
 class CancelIcon extends StatelessWidget {
   final bool isLoading;
@@ -40,7 +41,7 @@ class CancelIcon extends StatelessWidget {
         GestureDetector(
           onTap: onTap,
           child: Icon(
-            Icons.cancel,
+            FluentIcons.dismiss_circle_20_filled,
             size: FluentSize.size200.value,
             color: colorMode(
               isNeutral

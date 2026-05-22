@@ -1,5 +1,5 @@
 import 'package:flutter/foundation.dart';
 
-class GbtFluent2Debug {
+class Fluent2Debug {
   static bool printIsEnabled = kDebugMode;
 }

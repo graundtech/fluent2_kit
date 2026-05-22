@@ -37,7 +37,7 @@ flutter:
   assets:
     - assets/images/fluent.png
     - assets/images/fluent2ui.png
-    - assets/images/gbt_logo.png
+    - assets/images/company_logo.png
     - assets/images/avatars/avatar1.jpeg
     - assets/images/avatars/avatar2.jpeg
     - assets/images/avatars/avatar3.jpeg

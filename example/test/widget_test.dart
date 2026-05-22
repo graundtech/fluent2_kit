@@ -12,7 +12,6 @@ import 'package:flutter_test/flutter_test.dart';
 
 void main() {
   final routes = <String>[
-    Routes.home,
     Routes.fluentListView,
     Routes.fluentAvatarView,
     Routes.fluentButtonView,

@@ -28,14 +28,14 @@ final darkTheme = getTheme(
   brightness: Brightness.dark,
 );
 
-GbtFluentThemeData getTheme({
+Fluent2ThemeData getTheme({
   required MaterialColor brandColor,
   Brightness brightness = Brightness.light,
 }) {
   final colorMode = createColorMode(brightness);
   final fluentColors = convert(brandColor, brightness);
 
-  return GbtFluentThemeData(
+  return Fluent2ThemeData(
     splashColor: Colors.transparent,
     splashFactory: NoSplash.splashFactory,
     useMaterial3: true,

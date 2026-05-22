@@ -43,7 +43,7 @@ export 'package:fluent2ui/src/components/fluent_components/fluent_card_container
 export 'package:fluent2ui/src/components/fluent_components/fluent_left_nav/fluent_left_nav.dart';
 export 'package:fluent2ui/src/components/fluent_components/fluent_icon/fluent_icon.dart';
 export 'package:fluent2ui/src/components/fluent_components/fluent_circular_progress_indicator.dart';
-export 'package:fluent2ui/src/components/gbt_components/inner_aspect_ratio.dart';
+export 'package:fluent2ui/src/components/utils/inner_aspect_ratio.dart';
 
 export 'package:fluent2ui/src/fluent_models/fluent_avatar_size.dart';
 export 'package:fluent2ui/src/fluent_models/fluent_size.dart';

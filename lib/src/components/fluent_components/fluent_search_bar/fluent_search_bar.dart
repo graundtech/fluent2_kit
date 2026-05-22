@@ -73,7 +73,7 @@ class _FluentSearchBarState extends State<FluentSearchBar> {
       });
 
       if (searchBarController.queryString.isNotEmpty) {
-        if (GbtFluent2Debug.printIsEnabled) {
+        if (Fluent2Debug.printIsEnabled) {
           print('ASYNC FUNCTION RUNNING...');
         }
         await widget
@@ -84,20 +84,20 @@ class _FluentSearchBarState extends State<FluentSearchBar> {
               });
             })
             .then((value) {
-              if (GbtFluent2Debug.printIsEnabled) {
+              if (Fluent2Debug.printIsEnabled) {
                 print(
                   'ENDED OPERATION AND THIS IS THE VALUE: ${searchBarController.queryString}',
                 );
               }
             })
             .onError((error, stackTrace) {
-              if (GbtFluent2Debug.printIsEnabled) {
+              if (Fluent2Debug.printIsEnabled) {
                 print('ERROR IN OPERATION');
               }
             });
       } else {
         widget.onEmpty?.call();
-        if (GbtFluent2Debug.printIsEnabled) {
+        if (Fluent2Debug.printIsEnabled) {
           print('NOT RUNNING ASYNC FUNCTION');
         }
         setState(() {
@@ -105,7 +105,7 @@ class _FluentSearchBarState extends State<FluentSearchBar> {
         });
       }
     });
-    if (GbtFluent2Debug.printIsEnabled) {
+    if (Fluent2Debug.printIsEnabled) {
       print(
         '===> VALUE OF TEXT EDITING CONTROLLER: ${searchBarController.queryString}',
       );
@@ -156,7 +156,7 @@ class _FluentSearchBarState extends State<FluentSearchBar> {
   @override
   Widget build(BuildContext context) {
     final colorMode = createColorMode(Theme.of(context).brightness);
-    final fluentTheme = FluentThemeDataModel.of(context) as GbtFluentThemeData;
+    final fluentTheme = FluentThemeDataModel.of(context) as Fluent2ThemeData;
     final trailingIcon = widget.trailingIcon;
     final isNotEmpty = searchBarController.queryString.isNotEmpty;
     final isLoading = searchBarController._isLoading;
@@ -303,9 +303,10 @@ class _FluentSearchBarState extends State<FluentSearchBar> {
             onPressed: () {
               setState(() {
                 searchBarController.clearQueryString();
+                searchBarController.unfocus();
               });
               widget.onCancelOperation();
-              if (GbtFluent2Debug.printIsEnabled) {
+              if (Fluent2Debug.printIsEnabled) {
                 print(
                   'Is value changed? => ${searchBarController.queryString}',
                 );

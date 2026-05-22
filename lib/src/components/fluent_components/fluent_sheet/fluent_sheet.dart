@@ -102,7 +102,7 @@ class _FluentSheetState extends State<FluentSheet> {
   @override
   Widget build(BuildContext context) {
     final colorMode = createColorMode(Theme.of(context).brightness);
-    final fluentTheme = FluentThemeDataModel.of(context) as GbtFluentThemeData;
+    final fluentTheme = FluentThemeDataModel.of(context) as Fluent2ThemeData;
     final overlayBuilder = widget.overlayBuilder;
     return NotificationListener(
       onNotification: (ScrollEndNotification not) {

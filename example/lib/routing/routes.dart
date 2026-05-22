@@ -20,12 +20,10 @@ import 'package:example/screens/design_tokens_view/shadow_view.dart';
 import 'package:example/screens/design_tokens_view/shapes_view.dart';
 import 'package:example/screens/design_tokens_view/size_view.dart';
 import 'package:example/screens/design_tokens_view/typography_view.dart';
-import 'package:example/screens/home/test_home_view.dart';
 import 'package:flutter/cupertino.dart';
 
 /// Routes
 abstract final class Routes {
-  static const home = "/home";
   static const fluentListView = "/fluentListView";
   static const fluentAvatarView = "/fluentAvatarView";
   static const fluentBannerView = "/fluentBannerView";
@@ -51,9 +49,6 @@ abstract final class Routes {
   static const typographyView = "/typographyView";
 
   static Map<String, WidgetBuilder> get routingTable => {
-        Routes.home: (_) {
-          return TestHomeView();
-        },
         Routes.fluentListView: (_) {
           return FluentListView();
         },

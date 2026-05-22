@@ -109,7 +109,7 @@ class _FluentTextFieldState extends State<FluentTextField> {
   @override
   Widget build(BuildContext context) {
     final colorMode = createColorMode(Theme.of(context).brightness);
-    final fluentTheme = FluentThemeDataModel.of(context) as GbtFluentThemeData;
+    final fluentTheme = FluentThemeDataModel.of(context) as Fluent2ThemeData;
     final hintText = widget.hintText;
     final assistiveText = widget.assistiveText;
     final errorText = widget.errorText;
