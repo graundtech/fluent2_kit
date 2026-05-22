@@ -26,6 +26,13 @@ and the Flutter guide for
   <!--<img src="https://github.com/graundtech/fluent2_kit/assets/94455123/ddf28f29-edab-4d7d-98a4-5de492808d5a" alt="Fluent2 UI Design" width="170px">-->
 </p>
 
+<p align="center">
+  <a href="https://github.com/graundtech/fluent2_kit/actions/workflows/android-example-apk.yml">
+    <img src="https://github.com/graundtech/fluent2_kit/actions/workflows/android-example-apk.yml/badge.svg?branch=main" alt="Android example APK build status" />
+  </a>
+  <img src="https://img.shields.io/badge/releases-manual-blue?style=flat-square" alt="Releases: manual" />
+</p>
+
 ## Installing 
 Add in your pubspec.yaml file and run dart pub get to download the package.
 ```dart
