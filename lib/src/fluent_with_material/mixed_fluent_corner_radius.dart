@@ -1,6 +1,6 @@
 import 'dart:ui';
 
-import 'package:fluent2ui/src/fluent_models/fluent_corner_radius.dart';
+import 'package:fluent2_kit/src/fluent_models/fluent_corner_radius.dart';
 
 class MixedFluentCornerRadius implements FluentCornerRadius {
   final FluentCornerRadius _cornerRadius;

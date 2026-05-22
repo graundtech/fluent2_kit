@@ -1,5 +1,5 @@
 import 'package:flutter/cupertino.dart';
-import 'package:fluent2ui/src/components/fluent_components/fluent_scaffold/fluent_scaffold.dart';
+import 'package:fluent2_kit/src/components/fluent_components/fluent_scaffold/fluent_scaffold.dart';
 
 class FluentProvider extends StatelessWidget {
   final Widget child;

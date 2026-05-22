@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:fluent2ui/fluent_icons.dart';
-import 'package:fluent2ui/fluent2ui.dart';
-import 'package:fluent2ui/utils/debouncer.dart';
+import 'package:fluent2_kit/fluent_icons.dart';
+import 'package:fluent2_kit/fluent2_kit.dart';
+import 'package:fluent2_kit/utils/debouncer.dart';
 
 import 'cancel_icon.dart';
 

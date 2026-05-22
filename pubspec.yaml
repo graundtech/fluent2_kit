@@ -1,9 +1,9 @@
-name: fluent2ui
-description: A robust Fluent2 Material-based design system for seamless and intuitive user experiences.
-version: 10.0.0
+name: fluent2_kit
+description: A Flutter implementation of Microsoft's Fluent 2 design system — components, design tokens, and theming for iOS-first mobile experiences.
+version: 1.0.0
 homepage: https://graund.io
-repository: https://github.com/graundtech/fluent2ui
-issue_tracker: https://github.com/graundtech/fluent2ui/issues
+repository: https://github.com/graundtech/fluent2_kit
+issue_tracker: https://github.com/graundtech/fluent2_kit/issues
 
 topics:
   - fluent

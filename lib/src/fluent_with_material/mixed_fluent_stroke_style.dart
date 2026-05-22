@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:fluent2ui/src/fluent_models/fluent_corner_radius.dart';
-import 'package:fluent2ui/src/fluent_models/fluent_stroke_style.dart';
-import 'package:fluent2ui/src/fluent_models/fluent_stroke_thickness.dart';
+import 'package:fluent2_kit/src/fluent_models/fluent_corner_radius.dart';
+import 'package:fluent2_kit/src/fluent_models/fluent_stroke_style.dart';
+import 'package:fluent2_kit/src/fluent_models/fluent_stroke_thickness.dart';
 
 class MixedFluentStrokeStyle implements FluentStrokeStyle {
   @override

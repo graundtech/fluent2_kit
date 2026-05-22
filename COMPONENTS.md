@@ -1,6 +1,6 @@
 # Components Reference
 
-Short descriptions of each component in `fluent2ui`. Use this as a quick guide when wiring UI.
+Short descriptions of each component in `fluent2_kit`. Use this as a quick guide when wiring UI.
 
 ## App Shell
 - `FluentProvider`: wraps the app with `FluentScaffoldMessenger` to manage banners/toasts.

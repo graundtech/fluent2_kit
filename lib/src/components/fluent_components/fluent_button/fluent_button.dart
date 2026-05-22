@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:fluent2ui/fluent2ui.dart';
-import 'package:fluent2ui/src/components/conditional_parent_widget/conditional_parent_widget.dart';
+import 'package:fluent2_kit/fluent2_kit.dart';
+import 'package:fluent2_kit/src/components/conditional_parent_widget/conditional_parent_widget.dart';
 
 part 'fluent_button_style_variants/fluent_button_default_style.dart';
 

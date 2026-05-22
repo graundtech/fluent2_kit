@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:fluent2ui/fluent2ui.dart';
-import 'package:fluent2ui/theme_data.dart';
+import 'package:fluent2_kit/fluent2_kit.dart';
+import 'package:fluent2_kit/theme_data.dart';
 
 Widget _harness(Widget child) {
   return MaterialApp(

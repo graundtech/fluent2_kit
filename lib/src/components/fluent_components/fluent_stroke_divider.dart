@@ -1,7 +1,7 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
-import 'package:fluent2ui/fluent2ui.dart';
-import 'package:fluent2ui/src/components/fluent_components/fluent_stroke_border.dart';
+import 'package:fluent2_kit/fluent2_kit.dart';
+import 'package:fluent2_kit/src/components/fluent_components/fluent_stroke_border.dart';
 
 class FluentStrokeDivider extends StatelessWidget {
   final FluentStrokeStyle? style;

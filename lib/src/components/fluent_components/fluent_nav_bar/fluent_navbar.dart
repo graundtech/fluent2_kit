@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fluent2ui/fluent2ui.dart';
+import 'package:fluent2_kit/fluent2_kit.dart';
 
 Color? _controlsNavBarBackground1Rest(BuildContext context) =>
     FluentColors.of(context)?.brandBackground1Rest;

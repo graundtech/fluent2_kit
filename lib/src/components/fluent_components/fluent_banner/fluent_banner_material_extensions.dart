@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/material.dart' as material;
-import 'package:fluent2ui/src/components/fluent_components/fluent_banner/fluent_banner.dart';
+import 'package:fluent2_kit/src/components/fluent_components/fluent_banner/fluent_banner.dart';
 
 extension FluentBannerMaterialExtension on FluentBanner {
   PersistentBottomSheetController showBottomSheet(

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fluent2ui/fluent2ui.dart';
+import 'package:fluent2_kit/fluent2_kit.dart';
 
 part 'fluent_fab_style_variants/build_fluent_fab_accent_style.dart';
 part 'fluent_fab_style_variants/build_fluent_fab_subtle_style.dart';

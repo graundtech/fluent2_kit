@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:fluent2ui/src/fluent_models/fluent_text_theme.dart';
-import 'package:fluent2ui/src/fluent_with_material/mixed_fluent_text_style.dart';
+import 'package:fluent2_kit/src/fluent_models/fluent_text_theme.dart';
+import 'package:fluent2_kit/src/fluent_with_material/mixed_fluent_text_style.dart';
 
 class MixedFluentTextTheme extends TextTheme implements FluentTextTheme {
   @override

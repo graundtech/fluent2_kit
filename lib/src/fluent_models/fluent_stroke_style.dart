@@ -1,6 +1,6 @@
 import 'dart:ui';
 
-import 'package:fluent2ui/src/fluent_models/fluent_stroke_thickness.dart';
+import 'package:fluent2_kit/src/fluent_models/fluent_stroke_thickness.dart';
 
 class FluentStrokeStyle {
   final FluentStrokeThickness? thickness;

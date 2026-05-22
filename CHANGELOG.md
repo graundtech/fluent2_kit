@@ -1,78 +1,32 @@
-## 10.0.0
+## 1.0.0
 
-- [BREAKING CHANGE] Rename `GbtFluentThemeData` → `Fluent2ThemeData`
-- [BREAKING CHANGE] Rename `GbtFluent2Debug` → `Fluent2Debug`
-- [BREAKING CHANGE] Move `lib/src/components/gbt_components/` → `lib/src/components/utils/`
-- Rebrand from GBT to Graund Tech (bundle ID, copyright, example assets)
-- Remove dependency on private Dart registry; package is now published to pub.dev
-- Add Fluent 2 iOS reference links to README
+First release of **`fluent2_kit`** — a Flutter implementation of Microsoft's [Fluent 2](https://fluent2.microsoft.design/) design system, published under the [graund.io](https://pub.dev/publishers/graund.io) publisher.
 
-## 8.x.x
+This package is the successor to the now-unmaintained `fluent2ui` (previously published by a legacy account no longer under our control). It carries forward the full component library and design tokens, rebuilt and rebranded for a fresh start.
 
-- [BREAKING CHANGE] Set FluentSheet scroll physics to ClampingScrollPhysics
-- Change sdk constraints to ^3.8.0
-- Change flutter constraints to ^3.32.0
+### Highlights
 
-## 7.0.0
+- **Theming** — `Fluent2ThemeData` with light/dark modes, brand color customization, and full design token integration (corner radius, typography, shadows, strokes, sizes, colors).
+- **Components** — ~17 ready-to-use widgets: Avatar (with presence badges, activity rings, cutout), Button, FAB, NavBar, List (one-line / multi-line), Card, Radio, Checkbox, Switch Toggle, Segmented Control, Banner, Toast, Text Field (with Fluent 2 iOS spec states), Progress Bar, Heads-up Display, Sheet, Search Bar.
+- **Design tokens** — `FluentCornerRadius`, `FluentSize`, `FluentTypography`, `FluentShadow`, `FluentStroke`, `FluentColors` / `FluentDarkColors`.
+- **iOS-first** — components follow the Fluent 2 iOS spec; Material-based under the hood for Flutter portability.
 
-- [BREAKING CHANGE] Remove deprecated code
-- Change sdk constraints to ^3.7.0
-- Change flutter constraints to ^3.29.0
+### Migration from `fluent2ui`
 
-## 6.0.14
+Consumers of the previous `fluent2ui` package can migrate by:
 
-- Fix FluentToast dismiss issues.
-- Fix FluentTextField spacing
-- Fix _focus in onTapOutside in fluentTextField
-- Fix alignment in FluentListItemMultiline
-- Align trailing in FluentListItemMultiLine
-- Align label in FluentTextField
-- Fix scale in FluentTextField
+1. Replacing `fluent2ui:` with `fluent2_kit:` in `pubspec.yaml`.
+2. Rewriting imports: `package:fluent2ui/...` → `package:fluent2_kit/...`.
+3. The public API is otherwise compatible with `fluent2ui` 9.x — including the `Fluent2ThemeData` / `Fluent2Debug` renames introduced in the migration (formerly `GbtFluentThemeData` / `GbtFluent2Debug`).
 
-## 6.0.0
+### Previous history (as `fluent2ui`)
 
-- Change sdk constraints to ^3.4.0
-- Change flutter constraints to ^3.22.0
+For reference, the legacy package went through these milestones before being deprecated:
 
-## 5.10.3
-
-- [BREAKING CHANGE] Replace icon property to leading in fluent_section_description.
-- Fix FluentToast dismiss issues.
-- Remove deprecated code
-
-## 4.5.3
-
-- Reorder colors in theme_data conversion function
-- Fix FluentSearchBar
-- Add fontWeight variant in section header bold title
-- Rearrange actions in FluentSectionHeader
-- Add Dark Mode compatibility
-
-## 4.1.1
-
-- Dart format  
-
-## 4.1.0
-
-- Add FluentIcon 
-
-## 4.0.0
-
-- Solve warnings
-
-## 3.3.0
-
-- Change Flutter constraints from ">=3.13.0" to ">=3.16.0"
-
-## 3.0.2
-
-- Remove unnecessary dependencies 
-
-## 3.0.1
-
-- Improve pubspec.yaml
-
-## 3.0.0
-
-- Publish on pub.dev
-- Stable version.
+- **9.x** — final releases under the legacy publisher.
+- **8.x** — switched FluentSheet to `ClampingScrollPhysics`; SDK ^3.8, Flutter ^3.32.
+- **7.x** — removed deprecated APIs; SDK ^3.7, Flutter ^3.29.
+- **6.x** — FluentToast/FluentTextField/FluentListItemMultiLine fixes; SDK ^3.4, Flutter ^3.22.
+- **5.x** — section description API change (`icon` → `leading`); dark mode polish.
+- **4.x** — added FluentIcon; dark mode compatibility; section header refinements.
+- **3.x** — first publication to pub.dev; stable baseline.

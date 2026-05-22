@@ -1,4 +1,4 @@
-import 'package:fluent2ui/src/fluent_models/fluent_avatar_size.dart';
+import 'package:fluent2_kit/src/fluent_models/fluent_avatar_size.dart';
 
 class MixedFluentAvatarSize implements FluentAvatarSize {
   final FluentAvatarSize _size;

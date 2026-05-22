@@ -1,4 +1,4 @@
-import 'package:fluent2ui/src/fluent_models/fluent_text_style.dart';
+import 'package:fluent2_kit/src/fluent_models/fluent_text_style.dart';
 
 class FluentTextTheme {
   final FluentTextStyle? caption1;

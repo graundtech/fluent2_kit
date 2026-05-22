@@ -1,7 +1,7 @@
 import 'package:example/routing/routes.dart';
 import 'package:flutter/material.dart';
-import 'package:fluent2ui/fluent_icons.dart';
-import 'package:fluent2ui/fluent2ui.dart';
+import 'package:fluent2_kit/fluent_icons.dart';
+import 'package:fluent2_kit/fluent2_kit.dart';
 
 class OneLineListExampleView extends StatefulWidget {
   const OneLineListExampleView({super.key});

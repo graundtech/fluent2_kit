@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:fluent2ui/fluent2ui.dart';
+import 'package:fluent2_kit/fluent2_kit.dart';
 
 class FluentSwitchToggle extends StatelessWidget {
   final bool value;
