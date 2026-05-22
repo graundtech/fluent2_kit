@@ -26,14 +26,6 @@ class FluentSearchBarController {
     _focus.unfocus();
   }
 
-  FluentSearchBarController() {
-    if (Fluent2Debug.printIsEnabled) {
-      _focus.addListener(() {
-        print('focus changed: ${_focus.hasFocus}');
-      });
-    }
-  }
-
   void dispose() {
     _debounce.cancel();
     _focus.dispose();

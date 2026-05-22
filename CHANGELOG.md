@@ -1,3 +1,12 @@
+## 10.0.0
+
+- [BREAKING CHANGE] Rename `GbtFluentThemeData` → `Fluent2ThemeData`
+- [BREAKING CHANGE] Rename `GbtFluent2Debug` → `Fluent2Debug`
+- [BREAKING CHANGE] Move `lib/src/components/gbt_components/` → `lib/src/components/utils/`
+- Rebrand from GBT to Graund Tech (bundle ID, copyright, example assets)
+- Remove dependency on private Dart registry; package is now published to pub.dev
+- Add Fluent 2 iOS reference links to README
+
 ## 8.x.x
 
 - [BREAKING CHANGE] Set FluentSheet scroll physics to ClampingScrollPhysics

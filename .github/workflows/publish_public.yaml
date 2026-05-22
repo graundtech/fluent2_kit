@@ -21,9 +21,6 @@ jobs:
           channel: stable
           flutter-version: 3.29.0
 
-      - name: Remove private dev_dependencies
-        run: dart run remove_private_dependencies.dart
-
       - name: Install dependencies
         run: flutter pub get
 

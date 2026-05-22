@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:fluent2ui/fluent_icons.dart';
-import 'package:fluent2ui/fluent2_debug.dart';
 import 'package:fluent2ui/fluent2ui.dart';
 import 'package:fluent2ui/utils/debouncer.dart';
 
@@ -73,43 +72,18 @@ class _FluentSearchBarState extends State<FluentSearchBar> {
       });
 
       if (searchBarController.queryString.isNotEmpty) {
-        if (Fluent2Debug.printIsEnabled) {
-          print('ASYNC FUNCTION RUNNING...');
-        }
-        await widget
-            .onSearch(value)
-            .whenComplete(() {
-              setState(() {
-                searchBarController.toggleIsLoading();
-              });
-            })
-            .then((value) {
-              if (Fluent2Debug.printIsEnabled) {
-                print(
-                  'ENDED OPERATION AND THIS IS THE VALUE: ${searchBarController.queryString}',
-                );
-              }
-            })
-            .onError((error, stackTrace) {
-              if (Fluent2Debug.printIsEnabled) {
-                print('ERROR IN OPERATION');
-              }
-            });
+        await widget.onSearch(value).whenComplete(() {
+          setState(() {
+            searchBarController.toggleIsLoading();
+          });
+        });
       } else {
         widget.onEmpty?.call();
-        if (Fluent2Debug.printIsEnabled) {
-          print('NOT RUNNING ASYNC FUNCTION');
-        }
         setState(() {
           searchBarController.toggleIsLoading();
         });
       }
     });
-    if (Fluent2Debug.printIsEnabled) {
-      print(
-        '===> VALUE OF TEXT EDITING CONTROLLER: ${searchBarController.queryString}',
-      );
-    }
   }
 
   Widget? buildTrailingIcon(
@@ -306,11 +280,6 @@ class _FluentSearchBarState extends State<FluentSearchBar> {
                 searchBarController.unfocus();
               });
               widget.onCancelOperation();
-              if (Fluent2Debug.printIsEnabled) {
-                print(
-                  'Is value changed? => ${searchBarController.queryString}',
-                );
-              }
             },
             child: FluentText(
               'Cancelar',
