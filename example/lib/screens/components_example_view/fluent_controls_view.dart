@@ -31,8 +31,10 @@ class _FluentControlsViewState extends State<FluentControlsView> {
             FluentDarkColors.neutralBackgroundCanvasRest),
         child: SingleChildScrollView(
           child: SafeArea(
+            child: Material(
+              type: MaterialType.transparency,
               child: Column(
-            children: [
+                children: [
               FluentList.multiLine(
                 separator: FluentStrokeDivider(
                   startIndent: FluentStrokeBorderIndent.strokeIndent16,
@@ -199,8 +201,10 @@ class _FluentControlsViewState extends State<FluentControlsView> {
                   )
                 ],
               ),
-            ],
-          )),
+                ],
+              ),
+            ),
+          ),
         ),
       ),
     );

@@ -79,9 +79,10 @@ class _FluentProgressIndicatorsViewState
         ),
       ),
       body: SafeArea(
-        child: Column(
-          mainAxisSize: MainAxisSize.max,
-          children: [
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
             if (isUpdating)
               FluentProgressBar(
                 value: null,
@@ -200,7 +201,8 @@ class _FluentProgressIndicatorsViewState
                 value: 0.4,
               ),
             ),
-          ],
+            ],
+          ),
         ),
       ),
     );
