@@ -9,14 +9,14 @@ This is an open source Flutter package, published at https://pub.dev/packages/fl
 - `lib/src/` — internal implementation unless re-exported by a public entrypoint.
 - `example/` — runnable demo app; the living reference for component usage.
 - `test/` — unit and widget tests.
-- `docs/` — versioning and release policies.
+- `doc/` — versioning and release policies.
 - `COMPONENTS.md` — catalog of every public widget with a short description.
 
 ## Public API
 
 Anything exported from a top-level public entrypoint in `lib/` is public and subject to SemVer. Code under `lib/src/` is internal unless it is re-exported by one of those public entrypoints.
 
-Before changing or removing a public symbol, check whether it counts as a breaking change per `docs/VERSIONING.md` and apply the deprecation policy described there.
+Before changing or removing a public symbol, check whether it counts as a breaking change per `doc/VERSIONING.md` and apply the deprecation policy described there.
 
 ## Conventions
 
@@ -43,7 +43,7 @@ Running the demo app:
 cd example && flutter run
 ```
 
-Cutting a release: see `docs/RELEASING.md`. Do not bump `pubspec.yaml` version, tag, or publish without following that flow.
+Cutting a release: see `doc/RELEASING.md`. Do not bump `pubspec.yaml` version, tag, or publish without following that flow.
 
 ## SDK constraints
 
@@ -52,7 +52,7 @@ Cutting a release: see `docs/RELEASING.md`. Do not bump `pubspec.yaml` version, 
 ## References
 
 - `COMPONENTS.md` — public component catalog.
-- `docs/VERSIONING.md` — SemVer policy, deprecation rules, support window.
-- `docs/RELEASING.md` — step-by-step release process.
+- `doc/VERSIONING.md` — SemVer policy, deprecation rules, support window.
+- `doc/RELEASING.md` — step-by-step release process.
 - `README.md` "Coexisting with fluent_ui" — how to handle the name collision when both packages are imported.
 - Fluent 2 spec: https://fluent2.microsoft.design/
