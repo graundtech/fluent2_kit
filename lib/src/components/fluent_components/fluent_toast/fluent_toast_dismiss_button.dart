@@ -7,7 +7,7 @@ class FluentToastDismissButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       child: IconButton(
-        tooltip: "Fechar",
+        tooltip: "Close",
         onPressed: () {
           FluentToastOverlayEntry.of(context).remove();
         },

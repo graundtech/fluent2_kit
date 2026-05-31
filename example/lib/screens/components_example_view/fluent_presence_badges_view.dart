@@ -7,8 +7,7 @@ class FluentPresenceBadgesView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final badges = <_PresenceBadgeSample>[
-      // Note: class name "AvaliablePresenceBadge" has a typo in the package.
-      _PresenceBadgeSample("Available", AvaliablePresenceBadge()),
+      _PresenceBadgeSample("Available", AvailablePresenceBadge()),
       _PresenceBadgeSample("Away", AwayPresenceBadge()),
       _PresenceBadgeSample("Busy", BusyPresenceBadge()),
       _PresenceBadgeSample("Do Not Disturb", DNDPresenceBadge()),

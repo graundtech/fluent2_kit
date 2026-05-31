@@ -1,4 +1,4 @@
-/// A Dart library
+/// Flutter components, design tokens, and themes for Fluent 2 mobile apps.
 library;
 
 export 'package:fluent2_kit/src/components/fluent_components/fluent_list/fluent_list.dart';

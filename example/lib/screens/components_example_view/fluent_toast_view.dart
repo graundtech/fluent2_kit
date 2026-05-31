@@ -24,7 +24,7 @@ class FluentToastView extends StatelessWidget {
         context: context,
         duration: const Duration(seconds: 3),
         onDismissed: () {
-          print("Fechou!");
+          print("Closed!");
         },
       );
     }

@@ -7,11 +7,11 @@ Future<void> main() async {
   debugPrint('main()');
   debugPrint('begin initialization');
 
-  debugPrint('runing app (splash)');
+  debugPrint('running app (splash)');
   runApp(MyApp(home: SplashScreenView()));
 
   await Future.delayed(Duration(seconds: 3));
 
-  debugPrint('runing app (home)');
+  debugPrint('running app (home)');
   runApp(MyApp(home: HomeView()));
 }

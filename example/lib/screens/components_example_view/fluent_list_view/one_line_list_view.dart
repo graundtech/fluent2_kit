@@ -62,7 +62,7 @@ class _OneLineListExampleViewState extends State<OneLineListExampleView> {
                     text: "FY24 Planning",
                   ),
                   FluentListItemOneLine(
-                    text: "Optional Connected Experiencies",
+                    text: "Optional Connected Experiences",
                   ),
                   FluentListItemOneLine(
                     text: "Tagged",

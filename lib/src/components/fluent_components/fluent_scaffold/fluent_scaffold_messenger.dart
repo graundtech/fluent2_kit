@@ -13,7 +13,7 @@ class FluentScaffoldMessenger extends StatefulWidget {
     final value = context.dependOnInheritedWidgetOfExactType<
         _InheritedFluentScaffoldMessenger>();
     if (value == null) {
-      throw "_InheritedFluentScaffoldMessenger was not found on the tree. Did you remember to use the FluentProvider?";
+      throw "_InheritedFluentScaffoldMessenger was not found in the widget tree. Did you remember to use the FluentProvider?";
     }
     return value.state;
   }

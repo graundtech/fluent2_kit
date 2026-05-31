@@ -124,7 +124,7 @@ class FluentAvatarView extends StatelessWidget {
                 subtext: "You: Let's do this!",
                 // available
                 leading: FluentAvatar(
-                  statusPresenceBadge: StatusPresenceBadge.avaliable,
+                  statusPresenceBadge: StatusPresenceBadge.available,
                   strokeStyle: FluentStrokeStyle(
                     color: Colors.purple,
                     thickness: FluentStrokeThickness.strokeWidth15,

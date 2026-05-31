@@ -282,7 +282,7 @@ class _FluentSearchBarState extends State<FluentSearchBar> {
               widget.onCancelOperation();
             },
             child: FluentText(
-              'Cancelar',
+              'Cancel',
               style: FluentThemeDataModel.of(context).fluentTextTheme?.body1
                   ?.fluentCopyWith(
                     fluentColor: colorMode(

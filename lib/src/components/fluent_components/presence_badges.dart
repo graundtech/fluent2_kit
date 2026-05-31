@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:fluent2_kit/fluent_icons.dart';
 import 'package:fluent2_kit/fluent2_kit.dart';
 
-class AvaliablePresenceBadge extends StatelessWidget {
-  const AvaliablePresenceBadge({super.key});
+class AvailablePresenceBadge extends StatelessWidget {
+  const AvailablePresenceBadge({super.key});
 
   @override
   Widget build(BuildContext context) {

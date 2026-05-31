@@ -80,7 +80,7 @@ class MixedFluentShadow implements FluentShadow {
     );
   }
 
-  factory MixedFluentShadow.hightElevation(int shadowNumber,
+  factory MixedFluentShadow.highElevation(int shadowNumber,
       [Brightness brightness = Brightness.light]) {
     final double blurShadow1 = 1.0 * shadowNumber;
     final double blurShadow2 = brightness == Brightness.light ? 8 : 2;
@@ -159,4 +159,4 @@ class MixedFluentShadow implements FluentShadow {
   }
 }
 
-enum ElevationRamp { low, hight }
+enum ElevationRamp { low, high }

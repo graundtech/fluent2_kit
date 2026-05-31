@@ -155,5 +155,3 @@ class _FluentScaffoldBottomSheetItemState
     super.dispose();
   }
 }
-
-enum Gambiarra { one, two, three }

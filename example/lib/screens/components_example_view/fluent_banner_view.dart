@@ -19,12 +19,12 @@ class _FluentBannerViewState extends State<FluentBannerView> {
 
   final banner2 = const FluentBanner(
     bannerColor: FluentBannerColor.accent,
-    text: "Sem conexão com a internet.",
+    text: "No internet connection.",
   );
 
   final banner3 = const FluentBanner(
     bannerColor: FluentBannerColor.accent,
-    text: "Conexão restaurada.",
+    text: "Connection restored.",
   );
 
   void showBanner(BuildContext context) async {
@@ -78,14 +78,14 @@ class _FluentBannerViewState extends State<FluentBannerView> {
               crossAxisAlignment: WrapCrossAlignment.center,
               children: [
                 FluentButton(
-                  title: "Abrir Banner",
+                  title: "Open Banner",
                   onPressed: () async {
                     FluentScaffoldMessenger.of(context).addBanner(banner1);
                   },
                 ),
                 SizedBox(width: FluentSize.size80.value),
                 FluentButton(
-                  title: "Fechar Banner",
+                  title: "Close Banner",
                   onPressed: () async {
                     FluentScaffoldMessenger.of(context).removeBanner(banner1);
                   },
@@ -101,7 +101,7 @@ class _FluentBannerViewState extends State<FluentBannerView> {
             child: isLoading
                 ? CircularProgressIndicator()
                 : FluentButton(
-                    title: "Carregar",
+                    title: "Load",
                     onPressed: () => showBanner(context),
                   ),
           ),

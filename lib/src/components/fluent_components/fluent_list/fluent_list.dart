@@ -49,7 +49,7 @@ class FluentList extends StatelessWidget {
           sectionHeaderTitle != null && sectionHeaderTitleIcon != null ||
               sectionHeaderTitle != null && sectionHeaderTitleIcon == null ||
               sectionHeaderTitle == null && sectionHeaderTitleIcon == null,
-          'Cannot pass sectionHeaderTitleIcon icon without pass sectionHeaderTitle',
+          'Cannot pass sectionHeaderTitleIcon unless sectionHeaderTitle is also provided',
         );
 
   /// FluentList's constructor
@@ -81,7 +81,7 @@ class FluentList extends StatelessWidget {
           sectionHeaderTitle != null && sectionHeaderTitleIcon != null ||
               sectionHeaderTitle != null && sectionHeaderTitleIcon == null ||
               sectionHeaderTitle == null && sectionHeaderTitleIcon == null,
-          'Cannot pass sectionHeaderTitleIcon icon without pass sectionHeaderTitle',
+          'Cannot pass sectionHeaderTitleIcon unless sectionHeaderTitle is also provided',
         );
 
   /// FluentList's constructor
@@ -115,7 +115,7 @@ class FluentList extends StatelessWidget {
           sectionHeaderTitle != null && sectionHeaderTitleIcon != null ||
               sectionHeaderTitle != null && sectionHeaderTitleIcon == null ||
               sectionHeaderTitle == null && sectionHeaderTitleIcon == null,
-          'Cannot pass sectionHeaderTitleIcon icon without pass sectionHeaderTitle',
+          'Cannot pass sectionHeaderTitleIcon unless sectionHeaderTitle is also provided',
         ),
         listItems = [
           for (var index = 0; index < itemCount; index++)
@@ -153,7 +153,7 @@ class FluentList extends StatelessWidget {
           sectionHeaderTitle != null && sectionHeaderTitleIcon != null ||
               sectionHeaderTitle != null && sectionHeaderTitleIcon == null ||
               sectionHeaderTitle == null && sectionHeaderTitleIcon == null,
-          'Cannot pass sectionHeaderTitleIcon icon without pass sectionHeaderTitle',
+          'Cannot pass sectionHeaderTitleIcon unless sectionHeaderTitle is also provided',
         ),
         listItems = [
           for (var index = 0; index < itemCount; index++)

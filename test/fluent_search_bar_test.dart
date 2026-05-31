@@ -14,7 +14,7 @@ Widget _harness(Widget child) {
 
 void main() {
   testWidgets(
-    'tapping "Cancelar" clears the text and unfocuses the input',
+    'tapping "Cancel" clears the text and unfocuses the input',
     (tester) async {
       await tester.pumpWidget(
         _harness(
@@ -32,23 +32,23 @@ void main() {
 
       // Focus and type. enterText() focuses the field and fires onChanged,
       // which schedules the 800ms debouncer. The debouncer eventually calls
-      // setState, which is what makes the "Cancelar" button appear.
+      // setState, which is what makes the "Cancel" button appear.
       await tester.enterText(textFieldFinder, 'hello');
       await tester.pump(const Duration(milliseconds: 850));
 
       expect(focusNode.hasFocus, isTrue, reason: 'field should be focused');
       expect(textController.text, 'hello');
-      expect(find.text('Cancelar'), findsOneWidget);
+      expect(find.text('Cancel'), findsOneWidget);
 
-      // The change under test: tap Cancelar.
-      await tester.tap(find.text('Cancelar'));
+      // The change under test: tap Cancel.
+      await tester.tap(find.text('Cancel'));
       await tester.pump();
 
       expect(textController.text, isEmpty, reason: 'text should be cleared');
       expect(focusNode.hasFocus, isFalse,
-          reason: 'field should lose focus after Cancelar');
-      expect(find.text('Cancelar'), findsNothing,
-          reason: 'Cancelar button should disappear once unfocused and empty');
+          reason: 'field should lose focus after Cancel');
+      expect(find.text('Cancel'), findsNothing,
+          reason: 'Cancel button should disappear once unfocused and empty');
     },
   );
 }

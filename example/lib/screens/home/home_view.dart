@@ -190,7 +190,7 @@ class _HomeViewState extends State<HomeView> {
         print("LISTA VAZIA");
         return [
           Center(
-            child: FluentText("Nenhum componente corresponde a pesquisa"),
+            child: FluentText("No components match the search"),
           )
         ];
       } else {

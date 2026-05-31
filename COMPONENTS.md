@@ -57,7 +57,7 @@ Short descriptions of each component in `fluent2_kit`. Use this as a quick guide
 - `InitialsFontWeight`: `regular`, `medium` weight mapping for initials.
 - `StatusPresenceBadge`: enum for avatar status badges.
 - `CutoutSize`: cutout sizes for avatar overlays.
-- `AvaliablePresenceBadge`, `AwayPresenceBadge`, `BlockedPresenceBadge`, `BusyPresenceBadge`, `DNDPresenceBadge`, `OfflinePresenceBadge`, `OOFPresenceBadge`, `UnknownPresenceBadge`: preset status badge widgets.
+- `AvailablePresenceBadge`, `AwayPresenceBadge`, `BlockedPresenceBadge`, `BusyPresenceBadge`, `DNDPresenceBadge`, `OfflinePresenceBadge`, `OOFPresenceBadge`, `UnknownPresenceBadge`: preset status badge widgets.
 
 ## Lists
 - `FluentList`: list container with header/description and one-line or multi-line item constructors.

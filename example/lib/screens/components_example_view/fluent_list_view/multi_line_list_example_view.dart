@@ -7,13 +7,13 @@ class ExampleListUser {
   final String text;
   final Widget trailing;
   final String coverImageUrl;
-  final String? aditionalText;
+  final String? additionalText;
 
   ExampleListUser({
     required this.name,
     required this.text,
     required this.trailing,
-    this.aditionalText,
+    this.additionalText,
     required this.coverImageUrl,
   });
 }
@@ -79,7 +79,7 @@ class MultiLineListExampleView extends StatelessWidget {
         name: "Jane Cooper",
         text: "Product design",
         trailing: FluentIcon(FluentIcons.chevron_right_12_filled),
-        aditionalText: "Office",
+        additionalText: "Office",
         coverImageUrl: 'assets/images/avatars/avatar1.jpeg',
       )
     ];

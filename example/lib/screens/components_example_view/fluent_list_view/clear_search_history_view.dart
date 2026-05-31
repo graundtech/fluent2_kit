@@ -27,7 +27,7 @@ class ClearSearchHistoryView extends StatelessWidget {
               ),
               SizedBox(height: FluentSize.size240.value),
               FluentButton(
-                title: "Voltar",
+                title: "Back",
                 onPressed: () => Navigator.of(context).pop(),
               ),
             ],

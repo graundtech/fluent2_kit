@@ -1,6 +1,6 @@
 name: fluent2_kit
 description: A Flutter implementation of Microsoft's Fluent 2 design system — components, design tokens, and theming for iOS-first mobile experiences.
-version: 1.0.0
+version: 2.0.0
 homepage: https://graund.io
 repository: https://github.com/graundtech/fluent2_kit
 issue_tracker: https://github.com/graundtech/fluent2_kit/issues

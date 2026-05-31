@@ -74,10 +74,10 @@ class FluentAvatar extends StatelessWidget {
         // Status Presence Badge
         if (statusPresenceBadge != null && cutout == null)
           switch (statusPresenceBadge) {
-            StatusPresenceBadge.avaliable => Positioned(
+            StatusPresenceBadge.available => Positioned(
                 right: -1,
                 bottom: -1,
-                child: AvaliablePresenceBadge(),
+                child: AvailablePresenceBadge(),
               ),
             StatusPresenceBadge.away => Positioned(
                 right: -1,
@@ -147,8 +147,7 @@ class FluentAvatar extends StatelessWidget {
 }
 
 enum StatusPresenceBadge {
-  // TODO: fix this name in the next version => available
-  avaliable,
+  available,
   away,
   blocked,
   busy,

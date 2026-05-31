@@ -17,7 +17,7 @@ class _InheritedFluentBanner extends InheritedWidget {
     final value =
         context.dependOnInheritedWidgetOfExactType<_InheritedFluentBanner>();
     if (value == null) {
-      throw "_InheritedFluentBanner was not found on the tree. Did you remember to use the FluentProvider?";
+      throw "_InheritedFluentBanner was not found in the widget tree. Did you remember to use the FluentProvider?";
     }
     return value.banners;
   }

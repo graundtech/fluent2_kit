@@ -85,7 +85,7 @@ class _FluentHeadsUpDisplayDialogState
               onPressed: () {
                 Navigator.of(context2).pop();
               },
-              child: Text("Cancelar"),
+              child: Text("Cancel"),
             ),
             TextButton(
               onPressed: () {

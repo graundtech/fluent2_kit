@@ -127,12 +127,12 @@ class _FluentPopoverViewState extends State<FluentPopoverView> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   FluentButton(
-                    title: "Mostrar",
+                    title: "Show",
                     onPressed: controlledPopoverController.show,
                   ),
                   SizedBox(width: FluentSize.size120.value),
                   FluentButton(
-                    title: "Esconder",
+                    title: "Hide",
                     onPressed: controlledPopoverController.hide,
                   ),
                 ],

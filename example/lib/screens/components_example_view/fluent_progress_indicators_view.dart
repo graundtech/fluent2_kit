@@ -51,7 +51,7 @@ class _FluentProgressIndicatorsViewState
         future: future,
         confirmStopMessage: "Não quer saber mais a data?",
         hud: FluentHeadsUpDisplay(
-          text: "Atualizando Data...",
+          text: "Refreshing data...",
         ),
       ).show(context).then((_canceled) {
         if (_canceled == true) {
@@ -129,7 +129,7 @@ class _FluentProgressIndicatorsViewState
             Padding(
               padding: EdgeInsets.symmetric(vertical: FluentSize.size160.value),
               child: FluentButton(
-                title: "Atualizar data",
+                title: "Refresh data",
                 onPressed: updateDate,
               ),
             ),
@@ -145,7 +145,7 @@ class _FluentProgressIndicatorsViewState
             Padding(
               padding: EdgeInsets.symmetric(vertical: FluentSize.size160.value),
               child: FluentButton(
-                title: "Atualizar data",
+                title: "Refresh data",
                 onPressed: () => updateDate(showHUD: true),
               ),
             ),

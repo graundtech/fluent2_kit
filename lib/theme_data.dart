@@ -109,8 +109,8 @@ Fluent2ThemeData getTheme({
       shadow4: MixedFluentShadow.lowElevation(4, brightness),
       shadow8: MixedFluentShadow.lowElevation(8, brightness),
       shadow16: MixedFluentShadow.lowElevation(16, brightness),
-      shadow28: MixedFluentShadow.hightElevation(28, brightness),
-      shadow64: MixedFluentShadow.hightElevation(64, brightness),
+      shadow28: MixedFluentShadow.highElevation(28, brightness),
+      shadow64: MixedFluentShadow.highElevation(64, brightness),
       brandShadow2:
           MixedFluentShadow.brandColor(2, brandColor, ElevationRamp.low),
       brandShadow4:
@@ -120,9 +120,9 @@ Fluent2ThemeData getTheme({
       brandShadow16:
           MixedFluentShadow.brandColor(16, brandColor, ElevationRamp.low),
       brandShadow28:
-          MixedFluentShadow.brandColor(28, brandColor, ElevationRamp.hight),
+          MixedFluentShadow.brandColor(28, brandColor, ElevationRamp.high),
       brandShadow64:
-          MixedFluentShadow.brandColor(64, brandColor, ElevationRamp.hight),
+          MixedFluentShadow.brandColor(64, brandColor, ElevationRamp.high),
     ),
     fluentStrokeTheme: MixedFluentStrokeTheme(
       stroke1: MixedFluentStrokeStyle(

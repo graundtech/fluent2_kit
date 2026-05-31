@@ -1,3 +1,30 @@
+## 2.0.0
+
+Breaking cleanup release for typo fixes and public API polish.
+
+### Changed
+
+- Renamed presence badge APIs from `avaliable`/`Avaliable` to `available`/`Available`.
+- Renamed shadow elevation APIs from `hight` to `high`.
+- Standardized built-in component labels and example app copy in English.
+- Cleaned up README, example documentation, and release/versioning guidance.
+
+### Migration
+
+```dart
+// Before
+StatusPresenceBadge.avaliable
+AvaliablePresenceBadge()
+MixedFluentShadow.hightElevation(...)
+ElevationRamp.hight
+
+// After
+StatusPresenceBadge.available
+AvailablePresenceBadge()
+MixedFluentShadow.highElevation(...)
+ElevationRamp.high
+```
+
 ## 1.0.0
 
 First release of **`fluent2_kit`** — a Flutter implementation of Microsoft's [Fluent 2](https://fluent2.microsoft.design/) design system, published under the [graund.io](https://pub.dev/publishers/graund.io) publisher.

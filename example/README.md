@@ -1,16 +1,33 @@
-# example
+# fluent2_kit example
 
-A new Flutter project.
+Runnable gallery app that demonstrates every public component shipped by [`fluent2_kit`](../). It doubles as the living reference used by the package's documentation — if you want to see how a widget is meant to be wired up, the screen for it is here.
 
-## Getting Started
+## Running the app
 
-This project is a starting point for a Flutter application.
+```sh
+cd example
+flutter pub get
+flutter run
+```
 
-A few resources to get you started if this is your first Flutter project:
+The example depends on `fluent2_kit` via a local `path: ../` reference, so edits made in `lib/` upstream are picked up on the next `flutter run` / hot reload.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## What's inside
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+The component demos live under [`lib/screens/components_example_view/`](lib/screens/components_example_view) and cover: avatar, banner, button, card, controls (checkbox, radio, switch), FAB, list, nav bar, popover, presence badges, progress indicators, segmented control, sheet, tab bar, text field, and toast. Design token demos (corner radius, spacing, typography, shadow, stroke, color) live alongside under [`lib/screens/design_tokens_view/`](lib/screens/design_tokens_view).
+
+## Local Android build
+
+To package the example as an APK or AAB without CI, use the script at the repo root:
+
+```sh
+scripts/build_android_example.sh --apk
+```
+
+See the [root README](../README.md#local-android-example-builds) for full options and signing setup.
+
+## See also
+
+- [`../README.md`](../README.md) — package overview, theming, design tokens.
+- [`../COMPONENTS.md`](../COMPONENTS.md) — public component catalog.
+- [`../AGENTS.md`](../AGENTS.md) — repo conventions and workflows.

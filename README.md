@@ -1,26 +1,12 @@
-<!-- 
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
-
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages). 
-
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages). 
--->
-
 <p align="center">
   <img src="https://github.com/graundtech/fluent2_kit/assets/94455123/05470ad4-c025-4e3f-b05a-776e90abaef8" width="200" />
 </p>
 
 
 <div align="center">
-  Create beautiful, cohesive Microsoft experiences using Fluent 2. </br>
-  Fluent2 Design System Material based
+  Create beautiful, cohesive Microsoft experiences using Fluent 2.<br/>
+  A Material-based Fluent 2 design system for Flutter.
 </div>
-</br>
 <p align="center">
    <img src="https://github.com/graundtech/fluent2_kit/assets/94455123/279b1f1c-b0e5-4a92-aea0-21ebbd3a9234" alt="Fluent2 UI Design" width="170px">
   <!--<img src="https://github.com/graundtech/fluent2_kit/assets/94455123/ddf28f29-edab-4d7d-98a4-5de492808d5a" alt="Fluent2 UI Design" width="170px">-->
@@ -33,17 +19,16 @@ and the Flutter guide for
   <img src="https://img.shields.io/badge/releases-manual-blue?style=flat-square" alt="Releases: manual" />
 </p>
 
-## Installing 
-Add in your pubspec.yaml file and run dart pub get to download the package.
+## Installing
+Add this to your `pubspec.yaml` file and run `dart pub get` to download the package.
 ```dart
 dependencies:
   fluent2_kit:
 ```
-Import in files that it will be used
+Import it in the files where it will be used:
 ```dart
 import 'package:fluent2_kit/fluent2_kit.dart';
 ```
-</br>
 
 ### Coexisting with `fluent_ui`
 
@@ -63,16 +48,14 @@ fluent_desktop.NavigationView(...)   // Windows desktop nav
 FluentNavBar(...)                    // mobile Fluent 2 nav from fluent2_kit
 ```
 
-</br>
 
 
 ## ✨ Features
 
-- Default theme based on Fluent2
-- Useful components (including the behavior)
-- Almost no dependencies but Flutter
+- Default theme based on Fluent 2
+- Useful components, including behavior
+- Almost no dependencies beyond Flutter
 
-</br>
 
 ## Local Android example builds
 
@@ -108,7 +91,7 @@ keyPassword=...
 
 <img width="980" alt="cover_image" src="https://github.com/graundtech/fluent2_kit/assets/94455123/0a1ea39c-9cc0-4f92-8541-0d12d66f713d">
 
-#### First of all, let's wrap our MaterialApp with FluentProvider
+#### First, wrap your MaterialApp with FluentProvider
 
 ```dart
 
@@ -118,9 +101,7 @@ FluentProvider(
 ```
 
 ### The FluentScaffold
-Don't forget.
-</br>
-In order to make things work, make sure to always use FluentScaffold rather than Scaffold.
+Use `FluentScaffold` instead of `Scaffold` when you need Fluent banners, toasts, or bottom-sheet behavior.
 ```dart
 
 FluentScaffold(
@@ -138,8 +119,7 @@ final theme = theme_data.theme;
 final darkTheme = theme_data.darkTheme;
 ```
 Or you can pass your own brandColor:
-</br>
-Suggestion: use [Smart Swatch Generator](https://smart-swatch.netlify.app/#7f22e2) to get your color palette
+> Tip: use [Smart Swatch Generator](https://smart-swatch.netlify.app/#7f22e2) to generate your color palette.
 
 ```dart
 import 'package:fluent2_kit/theme_data.dart';
@@ -179,7 +159,6 @@ FluentProvider(
 );
 ```
 
-</br>
 
 ## Fluent Icons
 
@@ -188,17 +167,13 @@ Import  `FluentIcons`:
 import 'package:fluent2_kit/fluent_icons.dart';
 ```
 
-</br>
 
 ## Design Tokens
 Design tokens are stored values used to assign Fluent styles like color, typography, spacing, or elevation, without hardcoding pixels and hex codes.
 
 ### CornerRadius
-The FluentThemeData alright have the predefined values to use in cornerRadius. 
-</br>
-</br>
+`FluentThemeData` includes predefined corner radius values.
 Use the `FluentCornerRadius` radius tokens to change the corner radius on elements.
-</br>
 You can use the `FluentContainer` component, which is basically a Material Container with properties that are compatible with Fluent 2 UI design rules.
 ```dart
 FluentContainer(
@@ -208,7 +183,6 @@ FluentContainer(
 
 ### Spacing Ramp
  It’s used in every component and layout to create a familiar and cohesive product experience, regardless of device or environment.
- </br>
  Use `FluentSize` values:
  ```dart
 FluentContainer(
@@ -217,9 +191,7 @@ FluentContainer(
 ```
 ### Typography
 The typography tokens are sets of global tokens that include font size, line height, weight and family. 
-</br>
-</br>
-Use `Fluent Text`, a component created to accept Fluent typography tokens. So you get this value directly from the theme.
+Use `FluentText`, a component created to accept Fluent typography tokens. So you get this value directly from the theme.
 
 ```dart
    // ✅
@@ -245,7 +217,7 @@ Use `Fluent Text`, a component created to accept Fluent typography tokens. So yo
       ),
     )
 ```
- But if you need to change some style of text like color, then you can use the `fluentCopyWith()`:
+ If you need to change a text style value such as color, use `fluentCopyWith()`:
  ```dart
 FluentText(
   "Text",
@@ -258,14 +230,12 @@ FluentText(
 ```
 ### Shadows
 Fluent offers six sets of shadows, each consisting of two layers.
-</br>
 We have 2 elevation ramps:
 
 - low elevation ramp (shadow2, shadow4, shadow8, shadow16)
 - high elevation ramp (shadow28, shadow64)
 
-If you choose brand shadow tokens to apply shadows to colors so the *luminosity equation* will be aplyed.
-</br>
+If you choose brand shadow tokens, the *luminosity equation* will be applied to the shadow color.
 You can use them choosing the value from the theme:
 ```dart
 FluentContainer(
@@ -319,10 +289,7 @@ FluentContainer(
 ```
 ### Color Tokens
 Use the `FluentColors` and  `FluentDarkColors` classes.
-</br>
-</br>
 **Interaction States:**
-</br>
 According to the documentation, the Fluent palettes are often used to indicate interaction states on components.
 ```dart
 color: FluentColors.of(context)?.brandForeground1Selected
@@ -333,8 +300,6 @@ color: FluentColors.of(context)?.brandBackground1Pressed
 
 #### Neutral Colors
 These colors are used on surfaces, text, and layout elements.
-</br>
-</br>
 In Light Theme:
 ```dart
 color: FluentColors.neutralBackground1Rest
@@ -405,21 +370,19 @@ FluentAvatar(
   ...
 )
 ```
-</br>
 
 ### Behavior
 
 ### Presence Badges
 
-There are 8 avatar badge variants: `away`, `avaliable`, `dnd`, `offline`, `unknown`, `busy`,`blocked`,`oof`.
+There are 8 avatar badge variants: `away`, `available`, `dnd`, `offline`, `unknown`, `busy`, `blocked`, `oof`.
 
 ```dart
  FluentAvatar(
-  statusPresenceBadge: StatusPresenceBadge.avaliable,
+  statusPresenceBadge: StatusPresenceBadge.available,
   ...
 )
 ```
-</br>
 
 ### Activity Rings
 
@@ -438,7 +401,6 @@ FluentAvatar(
   ),
 )
 ```
-</br>
 
 ### Cutout
 
@@ -467,7 +429,6 @@ FluentAvatar(
 )
 ```
 
-</br>
 
 ## Fluent Button
 
@@ -537,7 +498,6 @@ FluentButton(
 )
 ```
 
-</br>
 
 ## Fluent FAB
 
@@ -545,12 +505,12 @@ Floating action button (FAB) for a screen's primary action. Renders as a circula
 
 ### Sizes
 The `FluentFabSize` class has the following variations:
-- `Large` (default, 56pt)
+- `Large` (56pt, default)
 - `Small` (48pt)
 
 ### Variants
 The `FluentFabVariant` class contains the following variants:
-- `Accent` (default, brand background)
+- `Accent` (brand background, default)
 - `Subtle` (neutral background)
 
 ```dart
@@ -568,7 +528,6 @@ FluentFab(
 )
 ```
 
-</br>
 
 ## Fluent Navigation Bar
 
@@ -590,7 +549,7 @@ FluentNavBar(
 
 ### Gradient
 
-Suports the gradient propertie:
+Supports the `gradient` property:
 
 ```dart
 FluentNavBar(
@@ -632,13 +591,11 @@ FluentNavBar(
 )
 ```
 
-</br>
 
 ## Fluent List
 
 There are two variants and you can choose them using the named constructor:
 
-</br>
 
 - OneLine
 
@@ -652,8 +609,6 @@ FluentList.oneLine(
 <img width="373" alt="Screenshot 2024-02-20 at 16 07 11" src="https://github.com/graundtech/fluent2_kit/assets/94455123/c3f383f3-96a7-414c-8dd1-1694f19ab956">
 
 
-</br>
-</br>
 
 - MultiLine
 
@@ -665,8 +620,6 @@ FluentList.multiLine(
 ```
 <img width="381" alt="Screenshot 2024-02-20 at 16 06 47" src="https://github.com/graundtech/fluent2_kit/assets/94455123/f1bdb093-9b51-41ef-8e6b-af8b911bb3d3">
 
-</br>
-</br>
 
 FluentList has the following props:
 
@@ -690,13 +643,13 @@ FluentList has the following props:
 
 ```dart
 FluentList.multiLine(
-  sectionHeaderTitle: "I'm header title",
+  sectionHeaderTitle: "Notifications",
   sectionHeaderTitleVariant: SectionHeaderTitleVariant.bold,
   sectionHeaderActions: FluentSectionHeaderActions(
     action1: Icon(FluentIcons.circle_20_regular),
     action2: Icon(FluentIcons.circle_20_regular),
   ),
-  sectionDescriptionText: "This is my list description",
+  sectionDescriptionText: "Choose how alerts appear on your device.",
   separator: FluentStrokeDivider(),
   sectionDescriptionIcon: FluentIcons.leaf_three_16_filled,
   listItems: [
@@ -706,7 +659,6 @@ FluentList.multiLine(
 )
 ```
 
-</br>
 
 ## Fluent Card
 
@@ -726,9 +678,7 @@ FluentCard(
     width: double.maxFinite,
     height: double.maxFinite,
   ),
-  onPressed: () {
-    //   put your onPressed function here
-  },
+  onPressed: () {},
 )
 ```
 
@@ -737,11 +687,10 @@ If you just want to use a flexible container with card styles, you can use `Flue
 ```dart
 FluentCardContainer(
   padding: EdgeInsets.all(FluentSize.size160.value),
-  child: Text("Hi, i'm a text"),
+  child: Text("Card content"),
 )
 ```
 
-</br>
 
 ## Fluent Radio Button
 
@@ -749,9 +698,7 @@ FluentCardContainer(
 FluentRadioButton<Option>(
   value: Option.option1,
   groupValue: _option,
-  onChanged: (value) {
-  //   put your onChanged function here
-  },
+  onChanged: (value) {},
 )
 ```
 Disabled:
@@ -763,16 +710,13 @@ FluentRadioButton<Option>(
   )
 ```
 
-</br>
 
 ## Fluent Checkbox
 
 ```dart
 FluentCheckbox(
   value: isCheckbox1,
-  onChanged: (value) {
-    // put your onChanged function here
-  },
+  onChanged: (value) {},
 )
 ```
 Disabled:
@@ -785,7 +729,6 @@ FluentCheckbox(
 ```
 
 
-</br>
 
 ## Fluent Switch Toggle
 
@@ -807,7 +750,6 @@ FluentSwitchToggle(
 ```
 
 
-</br>
 
 ## Fluent Segmented Control
 
@@ -857,14 +799,13 @@ FluentSegmentedControl<ViewMode>.iconItems(
 )
 ```
 
-</br>
 
 ## Fluent Banner
 
 ```dart
 final myBanner = FluentBanner(
       bannerColor: FluentBannerColor.accent,
-      text: "It's me Mario",
+      text: "Your changes were saved.",
     );
 ```
 
@@ -883,7 +824,7 @@ Removing Fluent Banner
 
 ```dart
  FluentButton(
-  title: "Fechar Banner",
+  title: "Close Banner",
   onPressed: () async {
     FluentScaffoldMessenger.of(context).removeBanner(myBanner);
   },
@@ -891,7 +832,6 @@ Removing Fluent Banner
 ```
 
 
-</br>
 
 ## Fluent Toast
 `FluentToast` has 4 variants of FluentToastColor:
@@ -924,7 +864,7 @@ FluentButton(
       context: context,
       duration: null,
       onDismissed: () {
-        print("Fechou!");
+        print("Closed!");
       },
     );
   },
@@ -932,7 +872,6 @@ FluentButton(
 ```
 
 
-</br>
 
 ## Fluent Text Field
 
@@ -942,9 +881,7 @@ Underlined text input mirroring the Microsoft Fluent 2 iOS spec. Supports a floa
 FluentTextField(
   label: "Last Name",
   hintText: "Ballinger",
-  onChanged: (value) {
-  //   put your onChanged function here
-  },
+  onChanged: (value) {},
   obscureText: false,
   readOnly: false,
   suffixIcon: Icon(FluentIcons.leaf_three_16_filled),
@@ -1024,7 +961,6 @@ FluentTextField(
 
 
 
-</br>
 
 ## Fluent Progress Bar
 ```dart
@@ -1035,7 +971,6 @@ if (isUpdating)
 ```
 
 
-</br>
 
 ## Fluent Heads-up Display
 
@@ -1054,12 +989,11 @@ if (isUpdating)
   )
 ```
 
-</br>
 
 
 ## 📚 Additional information
 
-This is mainly inspired on the Fluent2 iOS Figma UI Kit. It will be gradually adapted to Android as soon as the Microsoft release its Figma UI Kit.
+This is mainly inspired by the Fluent 2 iOS Figma UI Kit. It will be gradually adapted to Android as Microsoft releases its Figma UI Kit.
 
 ### References
 

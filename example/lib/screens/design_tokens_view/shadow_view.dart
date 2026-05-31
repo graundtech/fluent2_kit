@@ -49,7 +49,7 @@ class ShadowView extends StatelessWidget {
       ),
     ];
 
-    final hightElevationRamp = [
+    final highElevationRamp = [
       ShadowExampleItem(
         name: "Shadow 28",
         shadow: FluentThemeDataModel.of(context).fluentShadowTheme?.shadow28,
@@ -171,7 +171,7 @@ class ShadowView extends StatelessWidget {
                       FluentThemeDataModel.of(context).fluentTextTheme?.title2,
                 ),
               ),
-              for (ShadowExampleItem shadow in hightElevationRamp) ...[
+              for (ShadowExampleItem shadow in highElevationRamp) ...[
                 FluentSectionHeader(
                   title: shadow.name,
                   titleVariant: SectionHeaderTitleVariant.subtle,
