@@ -7,6 +7,7 @@ import 'package:example/screens/components_example_view/fluent_controls_view.dar
 import 'package:example/screens/components_example_view/fluent_list_view/clear_search_history_view.dart';
 import 'package:example/screens/components_example_view/fluent_list_view/fluent_list_example_view.dart';
 import 'package:example/screens/components_example_view/fluent_nav_bar_view.dart';
+import 'package:example/screens/components_example_view/fluent_otp_code_field_view.dart';
 import 'package:example/screens/components_example_view/fluent_popover_view.dart';
 import 'package:example/screens/components_example_view/fluent_presence_badges_view.dart';
 import 'package:example/screens/components_example_view/fluent_progress_indicators_view.dart';
@@ -33,6 +34,7 @@ abstract final class Routes {
   static const fluentCardView = "/fluentCardView";
   static const fluentToastView = "/fluentToastView";
   static const fluentTextFieldView = "/fluentTextField";
+  static const fluentOtpCodeFieldView = "/fluentOtpCodeFieldView";
   static const fluentProgressIndicatorsView = "/fluentProgressIndicatorsView";
   static const fluentControlsView = "/fluentControlsView";
   static const fluentPopoverView = "/fluentPopoverView";
@@ -75,6 +77,9 @@ abstract final class Routes {
         },
         Routes.fluentTextFieldView: (_) {
           return FluentTextFieldView();
+        },
+        Routes.fluentOtpCodeFieldView: (_) {
+          return FluentOtpCodeFieldView();
         },
         Routes.fluentProgressIndicatorsView: (_) {
           return FluentProgressIndicatorsView();

@@ -35,6 +35,11 @@ Short descriptions of each component in `fluent2_kit`. Use this as a quick guide
 - `FluentTextField`: Fluent-styled text field with label, assistive/error text, and trailing clear icon.
 - `FluentTextFieldController`: holds a `TextEditingController` and focus notifier.
 - `TextFieldTrailingIcon`: trailing clear/aux icon logic for `FluentTextField`.
+- `FluentOtpCodeField`: composable numeric OTP input root with paste support and completion callback.
+- `FluentOtpCodeFieldController`: controller for reading and clearing the OTP code field.
+- `FluentOtpCodeGroup`: full-width row layout for composing OTP slots and separators.
+- `FluentOtpCodeSlot`: visual cell for one OTP character index.
+- `FluentOtpCodeSeparator`: separator for grouping OTP slots.
 - `FluentSearchBar`: async search field with debounce, cancel/clear handling, and alignment modes.
 - `FluentSearchBarController`: manages query text, focus, and loading state.
 - `FluentSearchBarTrailingIcon`: trailing icon behavior for search bar.

@@ -79,6 +79,13 @@ class _HomeViewState extends State<HomeView> {
     ),
     CardComponentPage(
       description:
+          "One-time password inputs help people enter secure verification codes.",
+      title: "Fluent OTP Code Field",
+      route: Routes.fluentOtpCodeFieldView,
+      previewIcon: FluentIcons.lock_closed_24_regular,
+    ),
+    CardComponentPage(
+      description:
           "Use activity indicators and progress bars to let people know your app isn’t stalled and to give them some idea of how long they’ll be waiting.",
       title: "Fluent Progress Bar",
       route: Routes.fluentProgressIndicatorsView,
