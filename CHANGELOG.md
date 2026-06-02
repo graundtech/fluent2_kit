@@ -1,3 +1,13 @@
+## 2.1.0
+
+Adds a composable OTP code field for verification flows.
+
+### Added
+
+- Added `FluentOtpCodeField`, `FluentOtpCodeGroup`, `FluentOtpCodeSlot`, `FluentOtpCodeSeparator`, and `FluentOtpCodeFieldController`.
+- Added a Fluent OTP Code Field example page with separator, disabled, invalid, four-digit, form, and controlled usage scenarios.
+- Added widget tests for OTP input filtering, paste handling, completion callbacks, disabled state, error state, custom length, and controlled value updates.
+
 ## 2.0.0
 
 Breaking cleanup release for typo fixes and public API polish.
