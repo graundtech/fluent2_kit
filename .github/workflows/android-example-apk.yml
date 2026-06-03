@@ -3,14 +3,22 @@ name: Android example APK
 on:
   push:
     branches: [main]
+    paths:
+      - .github/workflows/android-example-apk.yml
+      - pubspec.yaml
+      - CHANGELOG.md
   pull_request:
     branches: [main]
+    paths:
+      - .github/workflows/android-example-apk.yml
+      - pubspec.yaml
+      - CHANGELOG.md
   workflow_dispatch:
 
 jobs:
   build-apk:
     name: Build example APK
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     timeout-minutes: 30
 
     steps:
