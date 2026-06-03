@@ -32,9 +32,9 @@ class SplashScreenView extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Image.asset(
-                      "assets/images/company_logo.png",
-                      width: FluentSize.size200.value,
-                      height: FluentSize.size200.value,
+                      "assets/images/graund-icon.png",
+                      width: FluentSize.size320.value,
+                      height: FluentSize.size320.value,
                     ),
                     SizedBox(
                       width: FluentSize.size80.value,

@@ -13,7 +13,12 @@ on:
       - .github/workflows/android-example-apk.yml
       - pubspec.yaml
       - CHANGELOG.md
+  release:
+    types: [published]
   workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
   build-apk:
@@ -43,10 +48,23 @@ jobs:
       - name: Build APK (runs package + example tests)
         run: scripts/build_android_example.sh --apk
 
+      - name: Prepare release APK asset
+        run: |
+          tag="${GITHUB_REF_NAME:-${GITHUB_SHA}}"
+          mkdir -p dist
+          cp example/build/app/outputs/flutter-apk/app-release.apk "dist/fluent2_kit-example-${tag}.apk"
+
       - name: Upload APK artifact
         uses: actions/upload-artifact@v4
         with:
           name: fluent2_kit-example-apk-${{ github.sha }}
-          path: example/build/app/outputs/flutter-apk/*.apk
+          path: dist/*.apk
           if-no-files-found: error
           retention-days: 30
+
+      - name: Upload APK to GitHub release
+        if: github.event_name == 'release'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ github.event.release.tag_name }}
+        run: gh release upload "$TAG" "dist/fluent2_kit-example-$TAG.apk" --repo "$GITHUB_REPOSITORY"

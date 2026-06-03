@@ -85,6 +85,11 @@ gh release create vX.Y.Z \
   --verify-tag
 ```
 
+Publishing the GitHub release triggers the **Android example APK** workflow.
+That workflow builds the example app and uploads
+`fluent2_kit-example-vX.Y.Z.apk` as a release asset. The asset can take a few
+minutes to appear after the release is published.
+
 Flag reference:
 
 - `--latest` — mark this as the "Latest" release (shown on the repo home). Skip for pre-releases.
@@ -103,6 +108,7 @@ Confirm the prompt. The package appears on pub.dev within a couple of minutes.
 
 ```bash
 gh release view vX.Y.Z                            # title, notes, marked Latest
+gh release view vX.Y.Z --json assets              # example APK asset is attached
 git ls-remote --tags origin | grep vX.Y.Z         # tag is on origin
 flutter pub deps                                  # local resolution OK
 open "https://pub.dev/packages/fluent2_kit"       # version is live
