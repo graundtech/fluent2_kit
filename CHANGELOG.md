@@ -1,3 +1,12 @@
+## 2.1.1
+
+Fixes Fluent switch visibility when used in brand navigation bars.
+
+### Fixed
+
+- Added a contextual outline for `FluentSwitchToggle` when it is enabled inside brand `FluentNavBar` actions, keeping the switch visible while preserving the Fluent iOS toggle colors on neutral surfaces.
+- Added regression tests covering the Fluent iOS switch color specification and the brand navigation bar contrast adjustment.
+
 ## 2.1.0
 
 Adds a composable OTP code field for verification flows.
