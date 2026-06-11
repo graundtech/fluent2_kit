@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:fluent2_kit/fluent2_kit.dart';
 
+import 'fluent_navbar_action_scope.dart';
+
 Color? _controlsNavBarBackground1Rest(BuildContext context) =>
     FluentColors.of(context)?.brandBackground1Rest;
 const _darkControlsNavBarBackground1Rest =
@@ -61,45 +63,43 @@ class FluentNavBar extends StatelessWidget implements PreferredSizeWidget {
                   FluentText(
                     title?.title ?? '',
                     style: title is NavLeftTitle
-                        ? FluentThemeDataModel.of(context)
-                            .fluentTextTheme
-                            ?.title1
-                            ?.fluentCopyWith(
-                              fluentColor: foregroundColor ??
-                                  (themeColorVariation ==
-                                          FluentThemeColorVariation.brand
-                                      ? colorMode(
-                                          FluentColors
-                                              .controlsNavBarForeground1Rest,
-                                          FluentDarkColors
-                                              .controlsNavBarForeground1Rest,
-                                        )
-                                      : colorMode(
-                                          FluentColors.neutralForeground1Rest,
-                                          FluentDarkColors
-                                              .neutralForeground1Rest,
-                                        )),
-                            )
-                        : FluentThemeDataModel.of(context)
-                            .fluentTextTheme
-                            ?.body1Strong
-                            ?.fluentCopyWith(
-                              fluentColor: foregroundColor ??
-                                  (themeColorVariation ==
-                                          FluentThemeColorVariation.brand
-                                      ? colorMode(
-                                          FluentColors
-                                              .controlsNavBarForeground1Rest,
-                                          FluentDarkColors
-                                              .controlsNavBarForeground1Rest,
-                                        )
-                                      : colorMode(
-                                          FluentColors.neutralForeground1Rest,
-                                          FluentDarkColors
-                                              .neutralForeground1Rest,
-                                        )),
-                              fluentWeight: FluentFontWeight.bold,
-                            ),
+                        ? FluentThemeDataModel.of(
+                            context,
+                          ).fluentTextTheme?.title1?.fluentCopyWith(
+                            fluentColor:
+                                foregroundColor ??
+                                (themeColorVariation ==
+                                        FluentThemeColorVariation.brand
+                                    ? colorMode(
+                                        FluentColors
+                                            .controlsNavBarForeground1Rest,
+                                        FluentDarkColors
+                                            .controlsNavBarForeground1Rest,
+                                      )
+                                    : colorMode(
+                                        FluentColors.neutralForeground1Rest,
+                                        FluentDarkColors.neutralForeground1Rest,
+                                      )),
+                          )
+                        : FluentThemeDataModel.of(
+                            context,
+                          ).fluentTextTheme?.body1Strong?.fluentCopyWith(
+                            fluentColor:
+                                foregroundColor ??
+                                (themeColorVariation ==
+                                        FluentThemeColorVariation.brand
+                                    ? colorMode(
+                                        FluentColors
+                                            .controlsNavBarForeground1Rest,
+                                        FluentDarkColors
+                                            .controlsNavBarForeground1Rest,
+                                      )
+                                    : colorMode(
+                                        FluentColors.neutralForeground1Rest,
+                                        FluentDarkColors.neutralForeground1Rest,
+                                      )),
+                            fluentWeight: FluentFontWeight.bold,
+                          ),
                   ),
                   if (title?.subtitle != null)
                     FluentText(
@@ -109,7 +109,8 @@ class FluentNavBar extends StatelessWidget implements PreferredSizeWidget {
                           .fluentTextTheme
                           ?.caption2
                           ?.fluentCopyWith(
-                            fluentColor: foregroundColor ??
+                            fluentColor:
+                                foregroundColor ??
                                 (themeColorVariation ==
                                         FluentThemeColorVariation.brand
                                     ? colorMode(
@@ -138,17 +139,17 @@ class FluentNavBar extends StatelessWidget implements PreferredSizeWidget {
                 padding: title is NavLeftTitle
                     ? const EdgeInsets.only(right: 20)
                     : const EdgeInsets.only(right: 16),
-                child: action,
+                child: FluentNavBarActionScope(
+                  themeColorVariation: themeColorVariation,
+                  child: action,
+                ),
               ),
             )
             .toList(),
         surfaceTintColor: Colors.transparent,
-        flexibleSpace: Container(
-          decoration: BoxDecoration(
-            gradient: gradient,
-          ),
-        ),
-        backgroundColor: backgroundColor ??
+        flexibleSpace: Container(decoration: BoxDecoration(gradient: gradient)),
+        backgroundColor:
+            backgroundColor ??
             (themeColorVariation == FluentThemeColorVariation.brand
                 ? colorMode(
                     _controlsNavBarBackground1Rest(context),
@@ -158,7 +159,8 @@ class FluentNavBar extends StatelessWidget implements PreferredSizeWidget {
                     FluentColors.neutralBackground3Rest,
                     FluentDarkColors.neutralBackground3Rest,
                   )),
-        foregroundColor: foregroundColor ??
+        foregroundColor:
+            foregroundColor ??
             (themeColorVariation == FluentThemeColorVariation.brand
                 ? Colors.white
                 : colorMode(
@@ -171,7 +173,8 @@ class FluentNavBar extends StatelessWidget implements PreferredSizeWidget {
                 child: Column(
                   children: [
                     Padding(
-                      padding: childPadding ??
+                      padding:
+                          childPadding ??
                           EdgeInsets.only(
                             right: FluentSize.size160.value,
                             left: FluentSize.size160.value,
@@ -179,7 +182,7 @@ class FluentNavBar extends StatelessWidget implements PreferredSizeWidget {
                           ),
                       child: child,
                     ),
-                    FluentStrokeDivider()
+                    FluentStrokeDivider(),
                   ],
                 ),
               )
@@ -187,10 +190,8 @@ class FluentNavBar extends StatelessWidget implements PreferredSizeWidget {
                 preferredSize: const Size.fromHeight(2),
                 child: Column(
                   children: [
-                    SizedBox(
-                      height: FluentSize.size80.value,
-                    ),
-                    FluentStrokeDivider()
+                    SizedBox(height: FluentSize.size80.value),
+                    FluentStrokeDivider(),
                   ],
                 ),
               ),
