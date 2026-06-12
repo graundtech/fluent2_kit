@@ -1,0 +1,26 @@
+# fluent2_kit
+
+> Flutter components, design tokens, and themes for Microsoft Fluent 2 mobile apps, with an iOS-first design intent and Material-based Flutter portability.
+
+Use this package through public entrypoints only. Prefer `package:fluent2_kit/fluent2_kit.dart` for components and tokens, and `package:fluent2_kit/theme_data.dart` when using the built-in light/dark themes. Do not import from `lib/src`.
+
+Important usage notes:
+- Wrap the app with `FluentProvider` so banners, toasts, and Fluent scaffold behavior work.
+- Use `FluentScaffold` when a screen needs Fluent banners, toasts, nav bars, or bottom-sheet behavior.
+- Prefer Fluent widgets over Material widgets when this package has an equivalent.
+- Style through `Fluent2ThemeData` and Fluent token classes such as `FluentColors`, `FluentSize`, `FluentCornerRadius`, `FluentShadow`, `FluentStrokeStyle`, `FluentStrokeThickness`, and Fluent typography styles.
+- Avoid hardcoded colors, spacing, typography, radii, and Material-style affordances unless the package does not provide a Fluent equivalent.
+
+## Documentation
+
+- [LLM context](doc/LLM_CONTEXT.md): Compact, copy/paste-friendly guidance for AI agents using `fluent2_kit` in consuming apps.
+- [README](README.md): Human-oriented installation, setup, theming, and package overview.
+- [Components reference](COMPONENTS.md): Catalog of public widgets and related enums/controllers.
+- [Versioning policy](doc/VERSIONING.md): SemVer and public API compatibility rules.
+- [Release process](doc/RELEASING.md): Package release checklist.
+- [pub.dev package](https://pub.dev/packages/fluent2_kit): Published package page and API documentation entrypoint.
+
+## Examples
+
+- [Example app](example/): Runnable Flutter demo and living reference for component usage.
+- [Example screens](example/lib/screens/): Concrete usage samples for components and design tokens.

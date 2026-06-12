@@ -11,6 +11,8 @@ This is an open source Flutter package, published at https://pub.dev/packages/fl
 - `test/` — unit and widget tests.
 - `doc/` — versioning and release policies.
 - `COMPONENTS.md` — catalog of every public widget with a short description.
+- `llms.txt` — short Markdown index for LLMs and AI agents.
+- `doc/LLM_CONTEXT.md` — compact context file for LLMs using this package from consuming apps.
 
 ## Public API
 
@@ -22,8 +24,9 @@ Before changing or removing a public symbol, check whether it counts as a breaki
 
 - **Reuse existing components.** Consult `COMPONENTS.md` and use the components whenever possible instead of building one-offs.
 - **Naming.** Public widgets and tokens use the `Fluent*` prefix (`FluentButton`, `FluentColors`, `Fluent2ThemeData`).
-- **Theming.** Style only through `Fluent2ThemeData` and the `Fluent{CornerRadius,Size,Typography,Shadow,Stroke,Colors}` token classes. Never hardcode literal colors, paddings, or radii.
+- **Theming.** Style only through `Fluent2ThemeData` and Fluent token classes such as `FluentCornerRadius`, `FluentSize`, `FluentTextTheme`, `FluentShadow`, `FluentStrokeStyle`, `FluentStrokeThickness`, and `FluentColors`. Never hardcode literal colors, paddings, or radii.
 - **Platform intent.** Components follow the Fluent 2 iOS spec; Material is used internally for Flutter portability. Don't propose Material-style affordances unless they match the iOS spec.
+- **LLM docs.** When changing public components, tokens, setup, exports, or usage patterns, update `COMPONENTS.md`, `doc/LLM_CONTEXT.md`, and `llms.txt` in the same change when relevant.
 - **Commits.** Conventional Commits (`feat:`, `fix:`, `refactor!:`, `chore:`, `docs:`, `ci:`); use `!` or a `BREAKING CHANGE:` footer for breakings.
 
 ## Workflows
@@ -52,6 +55,8 @@ Cutting a release: see `doc/RELEASING.md`. Do not bump `pubspec.yaml` version, t
 ## References
 
 - `COMPONENTS.md` — public component catalog.
+- `llms.txt` — LLM-readable project index.
+- `doc/LLM_CONTEXT.md` — compact LLM usage context for consuming apps.
 - `doc/VERSIONING.md` — SemVer policy, deprecation rules, support window.
 - `doc/RELEASING.md` — step-by-step release process.
 - `README.md` "Coexisting with fluent_ui" — how to handle the name collision when both packages are imported.
