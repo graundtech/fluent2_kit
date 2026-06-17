@@ -65,6 +65,13 @@ class _HomeViewState extends State<HomeView> {
     ),
     CardComponentPage(
       description:
+          "Top sheets drop down below the nav bar for a simple task before returning to the parent view",
+      title: "Fluent Top Sheet",
+      route: Routes.fluentTopSheetView,
+      previewIcon: FluentIcons.document_24_regular,
+    ),
+    CardComponentPage(
+      description:
           "Toast notifications can be dismissed automatically or after the user performs the action/cancel.",
       title: "Fluent Toast",
       route: Routes.fluentToastView,

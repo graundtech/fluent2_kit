@@ -26,6 +26,7 @@ export 'package:fluent2_kit/src/components/fluent_components/fluent_avatar/fluen
 export 'package:fluent2_kit/src/components/fluent_components/fluent_avatar/fluent_initials.dart';
 export 'package:fluent2_kit/src/components/fluent_components/fluent_chip/fluent_chip.dart';
 export 'package:fluent2_kit/src/components/fluent_components/fluent_sheet/fluent_sheet.dart';
+export 'package:fluent2_kit/src/components/fluent_components/fluent_top_sheet/fluent_top_sheet.dart';
 export 'package:fluent2_kit/src/components/fluent_components/fluent_container.dart';
 export 'package:fluent2_kit/src/components/fluent_components/fluent_stroke_divider.dart';
 export 'package:fluent2_kit/src/components/fluent_components/fluent_text.dart';

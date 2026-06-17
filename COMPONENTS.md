@@ -104,6 +104,9 @@ Short descriptions of each component in `fluent2_kit`. Use this as a quick guide
 - `FluentSheet`: bottom sheet using `DraggableScrollableSheet`.
 - `FluentSheetController`: controller for sheet size and callbacks.
 - `showFluentBottomSheet`: helper that presents `FluentSheet` via a dialog route.
+- `FluentTopSheet`: top sheet that drops down below the nav bar, dismissible by swipe-up or scrim tap.
+- `FluentTopSheetController`: controller to open/close `FluentTopSheet` and observe its extent.
+- `showFluentTopSheet`: helper that presents `FluentTopSheet` via a dialog route.
 - `FluentTooltip`: Fluent-colored tooltip wrapper.
 - `CustomShape`: tooltip shape used by `FluentTooltip`.
 

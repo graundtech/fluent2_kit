@@ -13,6 +13,7 @@ import 'package:example/screens/components_example_view/fluent_presence_badges_v
 import 'package:example/screens/components_example_view/fluent_progress_indicators_view.dart';
 import 'package:example/screens/components_example_view/fluent_segmented_control_view.dart';
 import 'package:example/screens/components_example_view/fluent_sheet_view.dart';
+import 'package:example/screens/components_example_view/fluent_top_sheet_view.dart';
 import 'package:example/screens/components_example_view/fluent_tab_bar_view.dart';
 import 'package:example/screens/components_example_view/fluent_text_field_view.dart';
 import 'package:example/screens/components_example_view/fluent_toast_view.dart';
@@ -29,6 +30,7 @@ abstract final class Routes {
   static const fluentAvatarView = "/fluentAvatarView";
   static const fluentBannerView = "/fluentBannerView";
   static const fluentSheetView = "/fluentSheetView";
+  static const fluentTopSheetView = "/fluentTopSheetView";
   static const fluentButtonView = "/fluentButtonView";
   static const fluentFabView = "/fluentFabView";
   static const fluentCardView = "/fluentCardView";
@@ -62,6 +64,9 @@ abstract final class Routes {
         },
         Routes.fluentSheetView: (_) {
           return FluentSheetView();
+        },
+        Routes.fluentTopSheetView: (_) {
+          return FluentTopSheetView();
         },
         Routes.fluentButtonView: (_) {
           return FluentButtonView();

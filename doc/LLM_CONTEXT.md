@@ -80,7 +80,7 @@ Use these widgets before reaching for Material equivalents:
 - Lists: `FluentList`, `FluentListItemOneLine`, `FluentListItemMultiLine`, `FluentSectionHeader`, `FluentSectionDescription`.
 - Cards and surfaces: `FluentCard`, `FluentCardContainer`, `FluentContainer`, `FluentStrokeBorder`, `FluentStrokeDivider`.
 - Feedback: `FluentProgressBar`, `FluentCircularProgressIndicator`, `FluentActivityIndicator`, `FluentRefreshActivityIndicator`, `FluentBanner`, `FluentToast`, `FluentHeadsUpDisplay`.
-- Overlays: `FluentPopover`, `FluentSheet`, `showFluentBottomSheet`, `FluentTooltip`.
+- Overlays: `FluentPopover`, `FluentSheet`, `showFluentBottomSheet`, `FluentTopSheet`, `showFluentTopSheet`, `FluentTooltip`.
 
 For the full catalog, read `COMPONENTS.md`.
 
@@ -256,6 +256,19 @@ showFluentBottomSheet(
   child: Padding(
     padding: EdgeInsets.all(FluentSize.size160.value),
     child: FluentText('Sheet content'),
+  ),
+);
+```
+
+```dart
+// Drops down below the nav bar; pass topOffset = nav bar + status bar height.
+showFluentTopSheet(
+  context: context,
+  topOffset: MediaQuery.of(context).padding.top + 48,
+  headerTitle: FluentText('Filters'),
+  child: Padding(
+    padding: EdgeInsets.all(FluentSize.size160.value),
+    child: FluentText('Top sheet content'),
   ),
 );
 ```

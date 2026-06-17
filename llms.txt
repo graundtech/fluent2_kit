@@ -6,7 +6,7 @@ Use this package through public entrypoints only. Prefer `package:fluent2_kit/fl
 
 Important usage notes:
 - Wrap the app with `FluentProvider` so banners, toasts, and Fluent scaffold behavior work.
-- Use `FluentScaffold` when a screen needs Fluent banners, toasts, nav bars, or bottom-sheet behavior.
+- Use `FluentScaffold` when a screen needs Fluent banners, toasts, nav bars, or sheet behavior (bottom via `showFluentBottomSheet`, top via `showFluentTopSheet`).
 - Prefer Fluent widgets over Material widgets when this package has an equivalent.
 - Style through `Fluent2ThemeData` and Fluent token classes such as `FluentColors`, `FluentSize`, `FluentCornerRadius`, `FluentShadow`, `FluentStrokeStyle`, `FluentStrokeThickness`, and Fluent typography styles.
 - Avoid hardcoded colors, spacing, typography, radii, and Material-style affordances unless the package does not provide a Fluent equivalent.
