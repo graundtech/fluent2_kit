@@ -1,3 +1,13 @@
+## 2.2.0
+
+Adds a top sheet that drops down below the nav bar.
+
+### Added
+
+- Added `FluentTopSheet`, `FluentTopSheetController`, and `showFluentTopSheet` — a Fluent 2 top sheet anchored below the nav bar, dismissible by swiping the handle up or tapping the scrim.
+- Added a Fluent Top Sheet example page with full, half (scrolling list), and nav-header (hero image + action buttons) variations.
+- Added widget tests covering open, scrim-tap dismiss, and swipe-up dismiss.
+
 ## 2.1.1
 
 Fixes Fluent switch visibility when used in brand navigation bars.
