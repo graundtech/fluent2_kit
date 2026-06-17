@@ -16,6 +16,9 @@
   <a href="https://github.com/graundtech/fluent2_kit/actions/workflows/android-example-apk.yml">
     <img src="https://github.com/graundtech/fluent2_kit/actions/workflows/android-example-apk.yml/badge.svg?branch=main" alt="Android example APK build status" />
   </a>
+  <a href="https://github.com/graundtech/fluent2_kit/releases/latest">
+    <img src="https://img.shields.io/badge/download-example%20APK-3DDC84?style=flat-square&logo=android&logoColor=white" alt="Download the example app (APK)" />
+  </a>
   <img src="https://img.shields.io/badge/releases-manual-blue?style=flat-square" alt="Releases: manual" />
 </p>
 
@@ -30,32 +33,22 @@ Import it in the files where it will be used:
 import 'package:fluent2_kit/fluent2_kit.dart';
 ```
 
-### Coexisting with `fluent_ui`
-
-`fluent2_kit` targets the **Fluent 2 mobile/iOS spec** and uses class names like `FluentButton`, `FluentCard`, `FluentTextField`. The popular [`fluent_ui`](https://pub.dev/packages/fluent_ui) package targets the **Fluent UI desktop/Windows spec** and uses mostly unprefixed names (`Button`, `Card`, `TextBox`), so day-to-day collisions are rare.
-
-If you do use both packages in the same project — for example, a cross-platform app with Windows desktop and iOS/Android targets — import one of them with an alias to avoid ambiguity on framework-level types (`FluentIcons`, `Fluent2ThemeData` vs `FluentThemeData`):
-
-```dart
-import 'package:fluent2_kit/fluent2_kit.dart';
-import 'package:fluent_ui/fluent_ui.dart' as fluent_desktop;
-```
-
-Then reference desktop-only types via the prefix:
-
-```dart
-fluent_desktop.NavigationView(...)   // Windows desktop nav
-FluentNavBar(...)                    // mobile Fluent 2 nav from fluent2_kit
-```
-
-
-
 ## ✨ Features
 
 - Default theme based on Fluent 2
 - Useful components, including behavior
 - Almost no dependencies beyond Flutter
 
+
+## Try the example app
+
+Want to see the components in action without building anything? Download the
+prebuilt Android APK from the latest release:
+
+**[⬇️ Download the example app (APK)](https://github.com/graundtech/fluent2_kit/releases/latest)**
+— open the release's **Assets** and grab `fluent2_kit-example-<version>.apk`.
+
+Prefer to build it yourself? See [Local Android example builds](#local-android-example-builds).
 
 ## Local Android example builds
 
@@ -990,6 +983,24 @@ if (isUpdating)
 ```
 
 
+
+## Coexisting with `fluent_ui`
+
+`fluent2_kit` targets the **Fluent 2 mobile/iOS spec** and uses class names like `FluentButton`, `FluentCard`, `FluentTextField`. The popular [`fluent_ui`](https://pub.dev/packages/fluent_ui) package targets the **Fluent UI desktop/Windows spec** and uses mostly unprefixed names (`Button`, `Card`, `TextBox`), so day-to-day collisions are rare.
+
+If you do use both packages in the same project — for example, a cross-platform app with Windows desktop and iOS/Android targets — import one of them with an alias to avoid ambiguity on framework-level types (`FluentIcons`, `Fluent2ThemeData` vs `FluentThemeData`):
+
+```dart
+import 'package:fluent2_kit/fluent2_kit.dart';
+import 'package:fluent_ui/fluent_ui.dart' as fluent_desktop;
+```
+
+Then reference desktop-only types via the prefix:
+
+```dart
+fluent_desktop.NavigationView(...)   // Windows desktop nav
+FluentNavBar(...)                    // mobile Fluent 2 nav from fluent2_kit
+```
 
 ## 📚 Additional information
 
